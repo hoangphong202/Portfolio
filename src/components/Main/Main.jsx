@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { ReactTyped } from 'react-typed';
 import styles from './Main.module.css';
+import Btn from '../Button/Btn';
+import avatar from '../../assets/avatar.png';
 
 Main.propTypes = {
 
@@ -9,7 +11,7 @@ Main.propTypes = {
 
 function Main(props) {
     return (
-        <div>
+        <div id="home" className={styles.main_container}>
             <div className={styles.container}>
                 <p className={styles.hello}>Hello, I'm <span>Hoang Trung Phong</span></p>
 
@@ -32,16 +34,16 @@ function Main(props) {
                     love to continuously learn and wish to develop my career in Japan.
                 </p>
 
-                <div className="buttons">
-                    <button className="cv-btn">View CV</button>
-                    <a href="https://github.com/" target="_blank" rel="noopener noreferrer" className="github-icon">
+                <div className={styles.btn_container}>
+                    <Btn className={styles.cv_btn}>View CV</Btn>
+                    <a href="https://github.com/" target="_blank" rel="noopener noreferrer" className={styles.github_icon}>
                         <i className="fab fa-github"></i>
                     </a>
                 </div>
             </div>
 
-            <div>
-
+            <div className={styles.intro_image}>
+                <img src={avatar} alt="avatar" />
             </div>
         </div>
     );

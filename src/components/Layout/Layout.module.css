@@ -1,24 +1,40 @@
+.main_container {
+    width: 100%;
+    position: fixed;
+    z-index: 1000;
+
+}   
+
 .container {
     background-color: #0f0f0f;
     display: flex;
     padding: 15px 35px 15px 35px; 
     justify-content: space-between;
-
 }
 
 .container h1{
     margin: 0;
 }
 
-.navLinks{
-    display: flex;
-    align-items: center;
-
+.navLinks {
+  display: flex;
+  align-items: center;
 }
 
-.navLinks a {
+.link {
   margin-left: 30px;
   text-decoration: none;
   color: #ffffff;
   transition: color 0.3s;
+}
+
+.link:hover {
+  color: #00ffbf;
+}
+
+.active {
+  color: #00ffbf;
+  font-weight: 600;
+  border-bottom: 2px solid #00ffbf;
+  padding-bottom: 2px;
 }
