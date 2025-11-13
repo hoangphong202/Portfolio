@@ -8,6 +8,8 @@ import jv from "../../assets/logo/code/jv.png";
 import ij from "../../assets/logo/code/ij.png";
 
 function TechnologyModal({ isOpen, onClose }) {
+  if (!isOpen) return null;
+
   return (
     <div className={styles.modalOverlay} onClick={onClose}>
       <div className={styles.techModal} onClick={(e) => e.stopPropagation()}>

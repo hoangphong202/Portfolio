@@ -10,6 +10,8 @@ import jp from "../../assets/logo/country/JP.png";
 import en from "../../assets/logo/country/EN.png";
 
 function OrtherModal({ isOpen, onClose }) {
+  if (!isOpen) return null;
+
   return (
     <div className={styles.modalOverlay} onClick={onClose}>
       <div className={styles.techModal} onClick={(e) => e.stopPropagation()}>

@@ -2,9 +2,6 @@ import React from "react";
 import { MdClose } from "react-icons/md";
 import { FaPaintBrush } from "react-icons/fa";
 import styles from "./DesignModal.module.css";
-import csp from "../../assets/logo/draw/csp.png";
-import pts from "../../assets/logo/draw/pts.png";
-import pa from "../../assets/logo/design/Pa.png";
 import fm from "../../assets/logo/design/fm.png";
 
 function UIDesignModal({ isOpen, onClose }) {
@@ -14,8 +11,8 @@ function UIDesignModal({ isOpen, onClose }) {
     <div className={styles.modalOverlay} onClick={onClose}>
       <div className={styles.techModal} onClick={(e) => e.stopPropagation()}>
         <div className={styles.modalHeaderAll}>
+          s
           <MdClose className={styles.closeBtn} onClick={onClose} />
-
           <div className={styles.modalHeader}>
             <div className={styles.techTitle}>
               <FaPaintBrush className={styles.techIcon} />
