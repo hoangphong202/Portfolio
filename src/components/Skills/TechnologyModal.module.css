@@ -10,6 +10,12 @@
   animation: scaleIn 0.3s ease-in-out;
 }
 
+.imgLogo {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
 /* Header */
 .modalHeaderAll {
   position: relative;
@@ -54,20 +60,23 @@
   margin-bottom: 10px;
 }
 
+.iconGrid > div > svg {
+  width: 40px; /* bằng với imgLogo */
+  height: 40px;
+}
+
 /* Icon grid */
 .iconGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
-
-  padding: 15px;
+  grid-template-columns: repeat(5, 1fr); /* tối đa 5 icon 1 hàng */
+  gap: 20px;
 }
-
-.iconGrid div {
+.iconGrid > div {
   display: flex;
+
   flex-direction: column;
   align-items: center;
-  font-size: 2rem;
-  transition: transform 0.2s, color 0.2s;
+  text-align: center;
 }
 
 .iconGrid div:hover {
@@ -85,7 +94,12 @@
   font-size: 2.8rem;
   color: #ff4d4d;
   cursor: pointer;
-  z-index: 99999;
+  transition: transform 0.2s, color 0.2s;
+}
+
+.closeBtn:hover {
+  transform: rotate(90deg);
+  color: #ff0000;
 }
 
 /* Overlay */

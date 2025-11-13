@@ -1,13 +1,13 @@
 import React from "react";
-import { MdClose } from "react-icons/md";
-import { FaCode, FaHtml5, FaCss3Alt, FaJs, FaReact, FaBootstrap, FaJava, FaDatabase, FaGit, FaGithub, FaExternalLinkAlt } from "react-icons/fa";
-import { SiSpringboot, SiMysql, SiPostman, SiIntellijidea } from "react-icons/si";
+import { MdClose, MdSecurity } from "react-icons/md";
+import { FaCode, FaHtml5, FaCss3Alt, FaJs, FaReact, FaBootstrap, FaDatabase, FaGit, FaGithub, FaExternalLinkAlt } from "react-icons/fa";
+import { SiSpringboot, SiMysql, SiPostman, SiJsonwebtokens } from "react-icons/si";
 import styles from "./TechnologyModal.module.css";
 import { VscVscode } from "react-icons/vsc";
+import jv from "../../assets/logo/code/jv.png";
+import ij from "../../assets/logo/code/ij.png";
 
 function TechnologyModal({ isOpen, onClose }) {
-  if (!isOpen) return null;
-
   return (
     <div className={styles.modalOverlay} onClick={onClose}>
       <div className={styles.techModal} onClick={(e) => e.stopPropagation()}>
@@ -25,7 +25,7 @@ function TechnologyModal({ isOpen, onClose }) {
         <hr className={styles.modalDivider} />
 
         <div className={styles.techSection}>
-          <h3>Front-End:</h3>
+          <h3>Front-End</h3>
           <div className={styles.iconGrid}>
             <div>
               <FaHtml5 color="#E34C26" />
@@ -51,10 +51,10 @@ function TechnologyModal({ isOpen, onClose }) {
         </div>
 
         <div className={styles.techSection}>
-          <h3>Back-End:</h3>
+          <h3>Back-End</h3>
           <div className={styles.iconGrid}>
             <div>
-              <FaJava color="#E76F00" />
+              <img src={jv} alt="java" loading="lazy" className={styles.imgLogo} />
               <p>Java</p>
             </div>
             <div>
@@ -64,6 +64,14 @@ function TechnologyModal({ isOpen, onClose }) {
             <div>
               <FaExternalLinkAlt color="#00BFFF" />
               <p>Restful API</p>
+            </div>
+            <div>
+              <SiJsonwebtokens color="#FF5722" /> {/* nếu có icon JWT */}
+              <p>JWT</p>
+            </div>
+            <div>
+              <MdSecurity color="#4CAF50" /> {/* hoặc icon bảo mật khác */}
+              <p>Security</p>
             </div>
             <div>
               <SiMysql color="#00758F" />
@@ -77,7 +85,7 @@ function TechnologyModal({ isOpen, onClose }) {
         </div>
 
         <div className={styles.techSection}>
-          <h3>Tools:</h3>
+          <h3>Tools</h3>
           <div className={styles.iconGrid}>
             <div>
               <SiPostman color="#FF6C37" />
@@ -96,7 +104,7 @@ function TechnologyModal({ isOpen, onClose }) {
               <p>VSCode</p>
             </div>
             <div>
-              <SiIntellijidea color="#ff2870ff" />
+              <img src={ij} alt="intellij" loading="lazy" className={styles.imgLogo} />
               <p>IntelliJ</p>
             </div>
           </div>

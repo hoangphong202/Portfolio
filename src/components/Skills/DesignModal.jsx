@@ -6,6 +6,11 @@ import csp from "../../assets/logo/draw/csp.png";
 import pts from "../../assets/logo/draw/pts.png";
 import pa from "../../assets/logo/design/Pa.png";
 import fm from "../../assets/logo/design/fm.png";
+import cv from "../../assets/logo/design/Cv.png";
+import am from "../../assets/logo/design/am.png";
+import av from "../../assets/logo/design/av.png";
+import ae from "../../assets/logo/design/AE.png";
+import c from "../../assets/logo/design/c.png";
 
 function DesignModal({ isOpen, onClose }) {
   if (!isOpen) return null;
@@ -34,6 +39,14 @@ function DesignModal({ isOpen, onClose }) {
               <p>Figma</p>
             </div>
             <div>
+              <img src={cv} alt="Canva" loading="lazy" className={styles.imgLogo} />
+              <p>Canva</p>
+            </div>
+            <div>
+              <img src={pa} alt="picsart" loading="lazy" className={styles.imgLogo} />
+              <p>Picsart</p>
+            </div>
+            <div>
               <img src={csp} alt="Clip Studio Paint" loading="lazy" className={styles.imgLogo} />
               <p>Clip Studio Paint</p>
             </div>
@@ -41,22 +54,30 @@ function DesignModal({ isOpen, onClose }) {
               <img src={pts} alt="Photoshop" loading="lazy" className={styles.imgLogo} />
               <p>Photoshop</p>
             </div>
-            <div>
-              <img src={pa} alt="picsart" loading="lazy" className={styles.imgLogo} />
-              <p>Picsart</p>
-            </div>
           </div>
         </div>
 
-        {/* <div className={styles.techSection}>
-          <h3>Animation Tools</h3>
+        <div className={styles.techSection}>
+          <h3>Motion & Audio Design</h3>
           <div className={styles.iconGrid}>
             <div>
-              <img src={fm} alt="Live 2D" loading="lazy" className={styles.imgLogo} />
-              <p>Figma</p>
+              <img src={av} alt="Avee player" loading="lazy" className={styles.imgLogo} />
+              <p>Avee player</p>
+            </div>
+            <div>
+              <img src={am} alt="Alight motion" loading="lazy" className={styles.imgLogo} />
+              <p>Alight motion</p>
+            </div>
+            <div>
+              <img src={c} alt="capcut" loading="lazy" className={styles.imgLogo} />
+              <p>CapCut</p>
+            </div>
+            <div>
+              <img src={ae} alt="after effect" loading="lazy" className={styles.imgLogo} />
+              <p>After effect</p>
             </div>
           </div>
-        </div> */}
+        </div>
       </div>
     </div>
   );

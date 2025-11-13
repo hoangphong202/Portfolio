@@ -1,7 +1,7 @@
 import React from "react";
 import { MdClose } from "react-icons/md";
 import { FaEllipsisH } from "react-icons/fa";
-import styles from "./DesignModal.module.css";
+import styles from "./OrtherModal.module.css";
 import w from "../../assets/logo/Office/w.png";
 import e from "../../assets/logo/Office/e.png";
 import p from "../../assets/logo/Office/p.png";
@@ -10,8 +10,6 @@ import jp from "../../assets/logo/country/JP.png";
 import en from "../../assets/logo/country/EN.png";
 
 function OrtherModal({ isOpen, onClose }) {
-  if (!isOpen) return null;
-
   return (
     <div className={styles.modalOverlay} onClick={onClose}>
       <div className={styles.techModal} onClick={(e) => e.stopPropagation()}>

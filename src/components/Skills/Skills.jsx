@@ -6,6 +6,7 @@ import TechnologyModal from "./TechnologyModal";
 import OrtherModal from "./OrtherModal";
 import DrawModal from "./DrawModal";
 import DesignModal from "./DesignModal";
+import UIDesignModal from "./UIDesignModal";
 
 Skills.propTypes = {};
 
@@ -56,14 +57,14 @@ function Skills(props) {
             <button className={styles.viewBtn} onClick={() => setSelectedSkill(skill.title)}>
               View
             </button>
-            {selectedSkill === "Web Developer" && <TechnologyModal isOpen onClose={() => setSelectedSkill(null)} />}
-            {/* {selectedSkill === "UI/UX Design" && <UIDesignModal isOpen onClose={() => setSelectedSkill(null)} />} */}
-            {selectedSkill === "Graphic Design" && <DesignModal isOpen onClose={() => setSelectedSkill(null)} />}
-            {selectedSkill === "Drawing / Illustration" && <DrawModal isOpen onClose={() => setSelectedSkill(null)} />}
-            {selectedSkill === "OTHERS" && <OrtherModal isOpen onClose={() => setSelectedSkill(null)} />}
           </div>
         ))}
       </div>
+      {selectedSkill === "Web Developer" && <TechnologyModal isOpen onClose={() => setSelectedSkill(null)} />}
+      {selectedSkill === "UI/UX Design" && <UIDesignModal isOpen onClose={() => setSelectedSkill(null)} />}
+      {selectedSkill === "Graphic Design" && <DesignModal isOpen onClose={() => setSelectedSkill(null)} />}
+      {selectedSkill === "Drawing / Illustration" && <DrawModal isOpen onClose={() => setSelectedSkill(null)} />}
+      {selectedSkill === "OTHERS" && <OrtherModal isOpen onClose={() => setSelectedSkill(null)} />}
     </section>
   );
 }
