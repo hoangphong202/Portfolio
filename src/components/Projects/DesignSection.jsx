@@ -5,6 +5,7 @@ import styles from "./DesignSection.module.css";
 const illustrations = [
   { src: "design/poster/1.png", category: "Poster" },
   { src: "design/poster/2.png", category: "Poster" },
+  { src: "design/poster/7.jpg", category: "Poster" },
   { src: "design/poster/3.png", category: "Poster" },
   { src: "design/poster/4.png", category: "Poster" },
   { src: "design/poster/5.png", category: "Poster" },

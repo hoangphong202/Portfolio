@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { MdClose, MdChevronLeft, MdChevronRight } from "react-icons/md";
 import styles from "./DevModal.module.css";
+import { FaReact, FaServer } from "react-icons/fa";
 
 const DevModal = ({ project, onClose }) => {
   const [currentImage, setCurrentImage] = useState(0);
@@ -47,9 +48,14 @@ const DevModal = ({ project, onClose }) => {
               🔗 Live Demo
             </a>
           )} */}
-          {project.github && (
-            <a href={project.github} target="_blank" rel="noreferrer">
-              💻 GitHub
+          {project.githubFE && (
+            <a href={project.githubFE} target="_blank" rel="noreferrer">
+              <FaReact style={{ marginRight: "5px" }} /> GitHub Frontend
+            </a>
+          )}
+          {project.githubBE && (
+            <a href={project.githubBE} target="_blank" rel="noreferrer">
+              <FaServer style={{ marginRight: "5px" }} /> GitHub Backend
             </a>
           )}
         </div>

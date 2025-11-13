@@ -11,7 +11,6 @@ function UIDesignModal({ isOpen, onClose }) {
     <div className={styles.modalOverlay} onClick={onClose}>
       <div className={styles.techModal} onClick={(e) => e.stopPropagation()}>
         <div className={styles.modalHeaderAll}>
-          s
           <MdClose className={styles.closeBtn} onClick={onClose} />
           <div className={styles.modalHeader}>
             <div className={styles.techTitle}>

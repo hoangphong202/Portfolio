@@ -26,6 +26,12 @@
   background: none;
   border: none;
   cursor: pointer;
+  transition: all 200ms ease;
+}
+
+.closeBtn:hover {
+  transform: rotate(90deg) scale(1.2);
+  color: #00ffc8;
 }
 
 .imageSlider {
@@ -83,62 +89,21 @@
   display: flex;
   gap: 10px;
 }
+
 .links a {
   position: relative;
   color: #00ffc8;
   text-decoration: none;
-  padding: 4px 6px;
-  transition: color 200ms ease, transform 150ms ease;
+  padding: 8px 12px;
+  border: 1px solid #00ffc8;
+  border-radius: 6px;
+  transition: all 200ms ease;
   outline: none;
-}
-
-.links a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  height: 2px;
-  width: 100%;
-  background: linear-gradient(90deg, #00ffc8, rgba(0, 255, 200, 0.6));
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 280ms cubic-bezier(0.2, 0.8, 0.2, 1);
-  border-radius: 2px;
-  opacity: 0.95;
 }
 
 .links a:hover,
 .links a:focus {
   color: #ffffff;
-  transform: translateY(-3px);
-  text-decoration: none;
-  animation: neonPulse 600ms ease forwards;
-}
-
-.links a:hover::after,
-.links a:focus::after {
-  transform: scaleX(1);
-}
-
-.links a:active {
-  transform: translateY(-1px);
-}
-
-/* subtle neon glow on hover/focus */
-@keyframes neonPulse {
-  0% {
-    filter: drop-shadow(0 0 0 rgba(0, 255, 200, 0));
-  }
-  60% {
-    filter: drop-shadow(0 0 10px rgba(0, 255, 200, 0.45));
-  }
-  100% {
-    filter: drop-shadow(0 0 6px rgba(0, 255, 200, 0.35));
-  }
-}
-
-/* keyboard accessibility visible focus */
-.links a:focus-visible {
-  box-shadow: 0 0 8px rgba(0, 255, 200, 0.12);
-  border-radius: 6px;
+  box-shadow: 0 0 10px rgba(0, 255, 200, 0.4);
+  transform: translateY(-2px);
 }
