@@ -2,23 +2,44 @@ import React, { useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import styles from "./DesignSection.module.css";
 
-const illustrations = [
-  { src: "design/poster/1.png", category: "Poster" },
-  { src: "design/poster/2.png", category: "Poster" },
-  { src: "design/poster/7.jpg", category: "Poster" },
-  { src: "design/poster/3.png", category: "Poster" },
-  { src: "design/poster/4.png", category: "Poster" },
-  { src: "design/poster/5.png", category: "Poster" },
-  { src: "design/poster/6.png", category: "Poster" },
+// Poster
+import poster1 from "../../assets/design/poster/1.png";
+import poster2 from "../../assets/design/poster/2.png";
+import poster3 from "../../assets/design/poster/3.png";
+import poster4 from "../../assets/design/poster/4.png";
+import poster5 from "../../assets/design/poster/5.png";
+import poster6 from "../../assets/design/poster/6.png";
+import poster7 from "../../assets/design/poster/7.jpg";
 
-  { src: "design/vocabulary/1.png", category: "Vocabulary" },
-  { src: "design/vocabulary/2.png", category: "Vocabulary" },
-  { src: "design/vocabulary/3.png", category: "Vocabulary" },
-  { src: "design/vocabulary/4.png", category: "Vocabulary" },
-  { src: "design/vocabulary/5.png", category: "Vocabulary" },
-  { src: "design/vocabulary/6.png", category: "Vocabulary" },
-  { src: "design/vocabulary/7.png", category: "Vocabulary" },
-  { src: "design/vocabulary/8.png", category: "Vocabulary" },
+// Vocabulary
+import voc1 from "../../assets/design/vocabulary/1.png";
+import voc2 from "../../assets/design/vocabulary/2.png";
+import voc3 from "../../assets/design/vocabulary/3.png";
+import voc4 from "../../assets/design/vocabulary/4.png";
+import voc5 from "../../assets/design/vocabulary/5.png";
+import voc6 from "../../assets/design/vocabulary/6.png";
+import voc7 from "../../assets/design/vocabulary/7.png";
+import voc8 from "../../assets/design/vocabulary/8.png";
+
+const illustrations = [
+  // Poster
+  { src: poster1, category: "Poster" },
+  { src: poster2, category: "Poster" },
+  { src: poster7, category: "Poster" },
+  { src: poster3, category: "Poster" },
+  { src: poster4, category: "Poster" },
+  { src: poster5, category: "Poster" },
+  { src: poster6, category: "Poster" },
+
+  // Vocabulary
+  { src: voc1, category: "Vocabulary" },
+  { src: voc2, category: "Vocabulary" },
+  { src: voc3, category: "Vocabulary" },
+  { src: voc4, category: "Vocabulary" },
+  { src: voc5, category: "Vocabulary" },
+  { src: voc6, category: "Vocabulary" },
+  { src: voc7, category: "Vocabulary" },
+  { src: voc8, category: "Vocabulary" },
 ];
 
 const categories = ["All", "Poster", "Vocabulary"];

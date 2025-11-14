@@ -2,30 +2,60 @@ import React, { useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import styles from "./IllustrationSection.module.css";
 
+// Character
+import char1 from "../../assets/illustrations/character/1.png";
+import char2 from "../../assets/illustrations/character/2.png";
+import char3 from "../../assets/illustrations/character/3.png";
+import char4 from "../../assets/illustrations/character/4.png";
+import char5 from "../../assets/illustrations/character/5.png";
+import char6 from "../../assets/illustrations/character/6.png";
+import char7 from "../../assets/illustrations/character/7.png";
+import char8 from "../../assets/illustrations/character/8.png";
+
+// Background
+import bg1 from "../../assets/illustrations/background/1.png";
+import bg2 from "../../assets/illustrations/background/2.png";
+import bg3 from "../../assets/illustrations/background/3.png";
+import bg4 from "../../assets/illustrations/background/4.png";
+import bg5 from "../../assets/illustrations/background/5.png";
+import bg6 from "../../assets/illustrations/background/6.png";
+import bg7 from "../../assets/illustrations/background/7.png";
+
+// Sketch / Line
+import line1 from "../../assets/illustrations/line/1.png";
+import line2 from "../../assets/illustrations/line/2.png";
+import line3 from "../../assets/illustrations/line/3.png";
+import line4 from "../../assets/illustrations/line/4.png";
+import line5 from "../../assets/illustrations/line/5.png";
+import line6 from "../../assets/illustrations/line/6.png";
+
 const illustrations = [
-  { src: "illustrations/character/6.png", category: "Character" },
-  { src: "illustrations/character/8.png", category: "Character" },
-  { src: "illustrations/character/3.png", category: "Character" },
-  { src: "illustrations/character/2.png", category: "Character" },
-  { src: "illustrations/character/1.png", category: "Character" },
-  { src: "illustrations/character/4.png", category: "Character" },
-  { src: "illustrations/character/5.png", category: "Character" },
-  { src: "illustrations/character/7.png", category: "Character" },
+  // Character
+  { src: char1, category: "Character" },
+  { src: char2, category: "Character" },
+  { src: char3, category: "Character" },
+  { src: char4, category: "Character" },
+  { src: char5, category: "Character" },
+  { src: char6, category: "Character" },
+  { src: char7, category: "Character" },
+  { src: char8, category: "Character" },
 
-  { src: "illustrations/background/5.png", category: "Background" },
-  { src: "illustrations/background/6.png", category: "Background" },
-  { src: "illustrations/background/1.png", category: "Background" },
-  { src: "illustrations/background/2.png", category: "Background" },
-  { src: "illustrations/background/3.png", category: "Background" },
-  { src: "illustrations/background/4.png", category: "Background" },
-  { src: "illustrations/background/7.png", category: "Background" },
+  // Background
+  { src: bg1, category: "Background" },
+  { src: bg2, category: "Background" },
+  { src: bg3, category: "Background" },
+  { src: bg4, category: "Background" },
+  { src: bg5, category: "Background" },
+  { src: bg6, category: "Background" },
+  { src: bg7, category: "Background" },
 
-  { src: "illustrations/line/4.png", category: "Sketch" },
-  { src: "illustrations/line/5.png", category: "Sketch" },
-  { src: "/illustrations/line/1.png", category: "Sketch" },
-  { src: "/illustrations/line/2.png", category: "Sketch" },
-  { src: "illustrations/line/3.png", category: "Sketch" },
-  { src: "illustrations/line/6.png", category: "Sketch" },
+  // Sketch / Line
+  { src: line1, category: "Sketch" },
+  { src: line2, category: "Sketch" },
+  { src: line3, category: "Sketch" },
+  { src: line4, category: "Sketch" },
+  { src: line5, category: "Sketch" },
+  { src: line6, category: "Sketch" },
 ];
 
 const categories = ["All", "Character", "Background", "Sketch"];

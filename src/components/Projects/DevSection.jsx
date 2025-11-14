@@ -2,6 +2,23 @@ import React, { useState } from "react";
 import DevModal from "./DevModal";
 import styles from "./DevSection.module.css";
 
+import wc1 from "../../assets/projects/weatherchill/1.png";
+import wc2 from "../../assets/projects/weatherchill/2.png";
+import wc3 from "../../assets/projects/weatherchill/3.png";
+import wc4 from "../../assets/projects/weatherchill/4.png";
+import wc5 from "../../assets/projects/weatherchill/5.png";
+import wc6 from "../../assets/projects/weatherchill/6.png";
+import wc7 from "../../assets/projects/weatherchill/7.png";
+
+import nihon1 from "../../assets/projects/nihongo/1.jpg";
+import nihon2 from "../../assets/projects/nihongo/2.jpg";
+import nihon3 from "../../assets/projects/nihongo/3.jpg";
+import nihon4 from "../../assets/projects/nihongo/4.jpg";
+import nihon5 from "../../assets/projects/nihongo/5.jpg";
+
+import shop1 from "../../assets/projects/shopanime/1.jpg";
+import shop2 from "../../assets/projects/shopanime/2.jpg";
+
 const DevSection = () => {
   const [selectedProject, setSelectedProject] = useState(null);
 
@@ -10,15 +27,7 @@ const DevSection = () => {
       title: "WeatherChill",
       desc: "WeatherChill is a relaxing web app that blends music, visuals, and motion effects to create a chill and immersive experience.",
       tags: ["HTML", "CSS", "JS", "Java"],
-      images: [
-        "projects/weatherchill/2.png",
-        "projects/weatherchill/1.png",
-        "projects/weatherchill/6.png",
-        "projects/weatherchill/3.png",
-        "projects/weatherchill/4.png",
-        "projects/weatherchill/5.png",
-        "projects/weatherchill/7.png",
-      ],
+      images: [wc2, wc1, wc6, wc3, wc4, wc5, wc7],
       // link: "https://your-demo-link.com",
       githubFE: "https://github.com/your-repo",
       githubBE: "https://github.com/your-repo",
@@ -27,7 +36,7 @@ const DevSection = () => {
       title: "Nihongo Learning",
       desc: "An interactive web app for learning Japanese, featuring vocabulary practice, grammar lessons, quizzes, and a clean, user-friendly interface.",
       tags: ["HTML", "CSS", "ReactJS", "Java"],
-      images: ["projects/nihongo/1.jpg", "projects/nihongo/2.jpg", "projects/nihongo/3.jpg", "projects/nihongo/4.jpg", "projects/nihongo/5.jpg"],
+      images: [nihon1, nihon2, nihon3, nihon4, nihon5],
       githubFE: "https://github.com/your-repo",
       githubBE: "https://github.com/your-repo",
     },
@@ -35,7 +44,7 @@ const DevSection = () => {
       title: "Shop Anime",
       desc: "An online anime store offering figures, apparel, and collectibles with a fun and immersive shopping experience.",
       tags: ["HTML", "CSS", "ReactJS", "Java"],
-      images: ["projects/shopanime/2.jpg", "projects/shopanime/1.jpg"],
+      images: [shop1, shop2],
       github: "https://github.com/your-repo",
     },
   ];
