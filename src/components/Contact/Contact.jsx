@@ -25,7 +25,7 @@ const Contact = () => {
             <FiMail size={22} />
             <div>
               <h4>Email</h4>
-              <p>ghhhhh@gmail.com</p>
+              <p>hoangtrungphongit202@gmail.com</p>
             </div>
           </div>
 
@@ -33,7 +33,7 @@ const Contact = () => {
             <FaPhoneAlt size={22} />
             <div>
               <h4>Phone Number</h4>
-              <p>09999999999</p>
+              <p>0356344088</p>
             </div>
           </div>
 

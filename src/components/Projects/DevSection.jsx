@@ -29,23 +29,23 @@ const DevSection = () => {
       tags: ["HTML", "CSS", "JS", "Java"],
       images: [wc2, wc1, wc6, wc3, wc4, wc5, wc7],
       // link: "https://your-demo-link.com",
-      githubFE: "https://github.com/your-repo",
-      githubBE: "https://github.com/your-repo",
+      githubBE: "https://github.com/hoangphong202/WeatherChill",
     },
     {
       title: "Nihongo Learning",
       desc: "An interactive web app for learning Japanese, featuring vocabulary practice, grammar lessons, quizzes, and a clean, user-friendly interface.",
       tags: ["HTML", "CSS", "ReactJS", "Java"],
       images: [nihon1, nihon2, nihon3, nihon4, nihon5],
-      githubFE: "https://github.com/your-repo",
-      githubBE: "https://github.com/your-repo",
+      githubFE: "https://github.com/hoangphong202/japan_fe",
+      githubBE: "https://github.com/hoangphong202/japan_be",
     },
     {
       title: "Shop Anime",
       desc: "An online anime store offering figures, apparel, and collectibles with a fun and immersive shopping experience.",
       tags: ["HTML", "CSS", "ReactJS", "Java"],
       images: [shop1, shop2],
-      github: "https://github.com/your-repo",
+      githubFE: "https://github.com/hoangphong202/ShopAnime",
+      githubBE: "https://github.com/hoangphong202/ShopAnimeFE",
     },
   ];
 

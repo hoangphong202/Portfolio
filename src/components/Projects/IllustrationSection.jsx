@@ -31,21 +31,21 @@ import line6 from "../../assets/illustrations/line/6.png";
 
 const illustrations = [
   // Character
+  { src: char6, category: "Character" },
+  { src: char8, category: "Character" },
+  { src: char3, category: "Character" },
   { src: char1, category: "Character" },
   { src: char2, category: "Character" },
-  { src: char3, category: "Character" },
   { src: char4, category: "Character" },
   { src: char5, category: "Character" },
-  { src: char6, category: "Character" },
   { src: char7, category: "Character" },
-  { src: char8, category: "Character" },
 
   // Background
   { src: bg1, category: "Background" },
+  { src: bg5, category: "Background" },
   { src: bg2, category: "Background" },
   { src: bg3, category: "Background" },
   { src: bg4, category: "Background" },
-  { src: bg5, category: "Background" },
   { src: bg6, category: "Background" },
   { src: bg7, category: "Background" },
 

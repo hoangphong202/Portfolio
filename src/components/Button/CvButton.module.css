@@ -1,0 +1,46 @@
+/* Wrapper dropdown + button */
+.cv_wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* khoảng cách giữa dropdown và nút */
+}
+
+/* Dropdown select */
+.cv_select {
+  padding: 7px 15px; /* giống padding của nút */
+  font-size: 14px;
+  font-weight: 600;
+  color: #00ffbf;
+  background-color: transparent;
+  border: 2px solid #00ffbf;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s;
+  outline: none;
+}
+
+.cv_select:hover,
+.cv_select:focus {
+  transform: scale(1.05);
+  background-color: #00ffbf;
+  color: #ffffff;
+  border-color: #00ffbf;
+}
+
+/* Nút View CV */
+.cv_btn {
+  padding: 7px 25px;
+  font-weight: 600;
+  border-radius: 25px;
+  background-color: transparent;
+  color: #00ffbf;
+  border: 2px solid #00ffbf;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.cv_btn:hover {
+  transform: scale(1.05);
+  background-color: #00ffbf;
+  color: #ffffff;
+}
