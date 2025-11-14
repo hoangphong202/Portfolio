@@ -44,8 +44,8 @@ const DevSection = () => {
       desc: "An online anime store offering figures, apparel, and collectibles with a fun and immersive shopping experience.",
       tags: ["HTML", "CSS", "ReactJS", "Java"],
       images: [shop1, shop2],
-      githubFE: "https://github.com/hoangphong202/ShopAnime",
-      githubBE: "https://github.com/hoangphong202/ShopAnimeFE",
+      githubFE: "https://github.com/hoangphong202/ShopAnimeFE",
+      githubBE: "https://github.com/hoangphong202/ShopAnime",
     },
   ];
 
