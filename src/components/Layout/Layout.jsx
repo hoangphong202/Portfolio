@@ -1,92 +1,71 @@
-import React, { useState } from 'react';
-import styles from './Layout.module.css';
-
-
+import React, { useState, useEffect, useRef } from "react";
+import styles from "./Layout.module.css";
 
 function Layout() {
-    const [activeSection, setActiveSection] = useState('home');
-    const handleScroll = () => {
-        const sections = ['home', 'about', 'skills', 'project', 'contacts'];
+  // State to track the currently active section
+  const [activeSection, setActiveSection] = useState("home");
+  const scrollTimeoutRef = useRef(null);
 
-        for (const sectionId of sections) {
-            const element = document.getElementById(sectionId);
-            if (element) {
-                const rect = element.getBoundingClientRect();
-                if (rect.top >= 0 && rect.top <= window.innerHeight / 2) {
-                    setActiveSection(sectionId);
-                    break;
-                }
-            }
+  // Function to handle scroll events
+  const handleScroll = () => {
+    const sections = ["home", "about", "skills", "projects", "contact"];
+    const viewportMid = window.innerHeight / 2; // Middle of the viewport
+
+    // Check which section is currently in view
+    for (const sectionId of sections) {
+      const element = document.getElementById(sectionId);
+      if (element) {
+        const rect = element.getBoundingClientRect();
+        if (rect.top <= viewportMid && rect.bottom >= viewportMid) {
+          setActiveSection(sectionId); // Update active section
+          break;
         }
+      }
+    }
+  };
+
+  useEffect(() => {
+    // Debounce scroll handling to improve performance
+    const onScroll = () => {
+      if (scrollTimeoutRef.current) {
+        clearTimeout(scrollTimeoutRef.current);
+      }
+      scrollTimeoutRef.current = setTimeout(handleScroll, 100);
     };
 
-    React.useEffect(() => {
-        window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll);
-    }, []);
+    window.addEventListener("scroll", onScroll);
+    handleScroll(); // Initial check on mount
 
-    const handleClick = (sectionId) => {
-        // Cập nhật trạng thái phần đang được chọn
-        setActiveSection(sectionId);
-
-        // Tìm phần tử có id tương ứng trong trang
-        const targetElement = document.getElementById(sectionId);
-
-        // Nếu tìm thấy thì cuộn mượt đến phần đó
-        if (targetElement) {
-            targetElement.scrollIntoView({ behavior: "smooth" });
-        }
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      clearTimeout(scrollTimeoutRef.current);
     };
+  }, []);
 
-    return (
-        <div className={styles.main_container}>
-            <header className={styles.container}>
-                <h1 className={styles.logo}>HOANGTRUNGPHONG</h1>
-                <nav className={styles.navLinks}>
-                    <a
-                        href="#home"
-                        onClick={() => handleClick("home")}
-                        className={`${styles.link} ${activeSection === "home" ? styles.active : ""}`}
-                    >
-                        Home
-                    </a>
+  // Function to handle navigation link clicks
+  const handleClick = (sectionId, e) => {
+    if (e && e.preventDefault) e.preventDefault();
+    setActiveSection(sectionId); // Update active section
+    const targetElement = document.getElementById(sectionId);
+    if (targetElement) {
+      targetElement.scrollIntoView({ behavior: "smooth" }); // Smooth scroll to section
+    }
+  };
 
-                    <a
-                        href="#about"
-                        onClick={() => handleClick("about")}
-                        className={`${styles.link} ${activeSection === "about" ? styles.active : ""}`}
-                    >
-                        About
-                    </a>
-
-                    <a
-                        href="#skills"
-                        onClick={() => handleClick("skills")}
-                        className={`${styles.link} ${activeSection === "skills" ? styles.active : ""}`}
-                    >
-                        Skills
-                    </a>
-
-                    <a
-                        href="#project"
-                        onClick={() => handleClick("project")}
-                        className={`${styles.link} ${activeSection === "project" ? styles.active : ""}`}
-                    >
-                        Project
-                    </a>
-
-                    <a
-                        href="#contacts"
-                        onClick={() => handleClick("contacts")}
-                        className={`${styles.link} ${activeSection === "contacts" ? styles.active : ""}`}
-                    >
-                        Contacts
-                    </a>
-
-                </nav>
-            </header>
-        </div>
-    );
+  return (
+    <div className={styles.main_container}>
+      <header className={styles.container}>
+        <h1 className={styles.logo}>HOANGTRUNGPHONG</h1>
+        <nav className={styles.navLinks}>
+          {["home", "about", "skills", "projects", "contact"].map((section) => (
+            <a key={section} href={`#${section}`} onClick={(e) => handleClick(section, e)} className={`${styles.link} ${activeSection === section ? styles.active : ""}`}>
+              {section.charAt(0).toUpperCase() + section.slice(1)} {/* Capitalize section name */}
+            </a>
+          ))}
+        </nav>
+      </header>
+    </div>
+  );
 }
 
 export default Layout;

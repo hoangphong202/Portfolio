@@ -10,7 +10,7 @@ const ProjectPage = () => {
   const [activeTab, setActiveTab] = useState("dev");
 
   return (
-    <div className={styles.projectPage} id="project">
+    <div className={styles.projectPage} id="projects">
       <div className={styles.header}>
         <h1 className={styles.title}>PROJECTS</h1>
         <p className={styles.subtitle}>Explore my works and creative endeavors</p>

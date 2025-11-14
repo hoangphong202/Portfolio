@@ -48,6 +48,7 @@ function Skills(props) {
   return (
     <section className={styles.skillsSection} id="skills">
       <h2 className={styles.skillsTitle}>SKILLS</h2>
+      <p className={styles.subtitle}>A showcase of my technical and creative abilities</p>
       <div className={styles.skillsGrid}>
         {skills.map((skill, index) => (
           <div className={styles.skillCard} key={index}>
