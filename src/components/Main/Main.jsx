@@ -2,7 +2,8 @@ import React from "react";
 import { ReactTyped } from "react-typed";
 import styles from "./Main.module.css";
 import Btn from "../Button/Btn";
-import avatar from "../../assets/avatar.png";
+// import avatar from "../../assets/avatar.png";
+import Loader from "./Loader.jsx";
 
 Main.propTypes = {};
 
@@ -40,9 +41,11 @@ function Main(props) {
         </div>
       </div>
 
-      <div className={styles.intro_image}>
+      {/* <div className={styles.intro_image}>
         <img src={avatar} alt="avatar" />
-      </div>
+      </div> */}
+
+      <Loader />
     </div>
   );
 }

@@ -43,11 +43,11 @@ const DevModal = ({ project, onClose }) => {
         </div>
 
         <div className={styles.links}>
-          {/* {project.link && (
+          {project.link && (
             <a href={project.link} target="_blank" rel="noreferrer">
               🔗 Live Demo
             </a>
-          )} */}
+          )}
           {project.githubFE && (
             <a href={project.githubFE} target="_blank" rel="noreferrer">
               <FaReact style={{ marginRight: "5px" }} /> GitHub Frontend

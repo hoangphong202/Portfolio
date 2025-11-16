@@ -4,8 +4,10 @@
   align-items: center;
   height: 100vh;
   padding: 0px 200px;
+  gap: 40px;
 }
 
+/* Left section text */
 .hello {
   margin: 0;
 }
@@ -17,7 +19,6 @@
 
 .title {
   font-size: 27px;
-
   margin: 0;
 }
 
@@ -33,14 +34,12 @@
   color: #ccc;
   max-width: 600px;
   text-align: justify;
-  line-height: 1.2;
+  line-height: 1.4;
 }
 
+/* Button + GitHub icon */
 .btn_container {
-  /* border: 3px solid rgba(255,255,255,0.08);
-       border-radius: 6px; */
   padding: 15px 12px;
-
   display: flex;
   align-items: center;
 }
@@ -50,14 +49,11 @@
   font-size: 28px;
   color: white;
   transition: transform 0.3s;
+  display: inline-block;
 }
 
 .github_icon:hover {
   transform: scale(1.2);
-}
-
-.github_icon {
-  display: inline-block;
 }
 
 /* Avatar */
@@ -71,6 +67,7 @@
   animation: pulse 2s infinite, float 3s ease-in-out infinite;
 }
 
+/* Float animation */
 @keyframes float {
   0% {
     transform: translateY(0);
@@ -83,6 +80,7 @@
   }
 }
 
+/* Pulse animation */
 @keyframes pulse {
   0% {
     box-shadow: 0 0 15px #00ffbf;
@@ -92,5 +90,73 @@
   }
   100% {
     box-shadow: 0 0 15px #00ffbf;
+  }
+}
+
+/* ===================================== */
+/*              RESPONSIVE               */
+/* ===================================== */
+
+/* --- Tablet (1024px ↓) --- */
+@media (max-width: 1024px) {
+  .main_container {
+    padding: 0 80px;
+    gap: 20px;
+  }
+
+  .intro_image img {
+    width: 250px;
+    height: 250px;
+  }
+
+  .title span {
+    font-size: 40px;
+  }
+}
+
+/* --- Small Tablet / Large Mobile (768px ↓) --- */
+@media (max-width: 768px) {
+  .main_container {
+    flex-direction: column-reverse;
+    text-align: center;
+    padding: 40px 30px;
+    height: auto;
+  }
+
+  .description {
+    text-align: center;
+  }
+
+  .intro_image img {
+    width: 220px;
+    height: 220px;
+  }
+
+  .btn_container {
+    justify-content: center;
+  }
+}
+
+/* --- Mobile (480px ↓) --- */
+@media (max-width: 480px) {
+  .main_container {
+    padding: 20px;
+  }
+
+  .title {
+    font-size: 22px;
+  }
+
+  .title span {
+    font-size: 32px;
+  }
+
+  .description {
+    font-size: 15px;
+  }
+
+  .intro_image img {
+    width: 180px;
+    height: 180px;
   }
 }

@@ -19,6 +19,8 @@ import nihon5 from "../../assets/projects/nihongo/5.jpg";
 import shop1 from "../../assets/projects/shopanime/1.jpg";
 import shop2 from "../../assets/projects/shopanime/2.jpg";
 
+import p1 from "../../assets/projects/portfolio/1p.png";
+
 const DevSection = () => {
   const [selectedProject, setSelectedProject] = useState(null);
 
@@ -46,6 +48,14 @@ const DevSection = () => {
       images: [shop1, shop2],
       githubFE: "https://github.com/hoangphong202/ShopAnimeFE",
       githubBE: "https://github.com/hoangphong202/ShopAnime",
+    },
+    {
+      title: "Portfolio",
+      desc: "Showcasing my projects and creative work, including web development and design.",
+      tags: ["HTML", "CSS", "ReactJS"],
+      images: [p1],
+      githubFE: "https://github.com/hoangphong202/Portfolio",
+      link: "https://hoangphong202.github.io/Portfolio/",
     },
   ];
 

@@ -1,5 +1,5 @@
 .contactSection {
-  padding: 70px 0;
+  padding: 50px 20px;
   background: #0d0d0d;
   color: white;
 }
@@ -19,16 +19,20 @@
   color: #ccc;
 }
 
+/* Container info + form */
 .container {
-  margin: 80px 190px 0px 190px;
+  max-width: 1200px;
+  margin: 0 auto;
   display: flex;
-  gap: 100px;
+  gap: 50px;
   justify-content: center;
   align-items: flex-start;
+  flex-wrap: wrap;
 }
 
+/* Info section */
 .info {
-  width: 40%;
+  flex: 1 1 350px; /* co giãn tối thiểu 350px */
   display: flex;
   flex-direction: column;
   gap: 30px;
@@ -38,14 +42,14 @@
   display: flex;
   align-items: center;
   gap: 15px;
-  border-bottom: 1px solid #0dd;
+  border-bottom: 1px solid #00ffbf;
   padding-bottom: 12px;
 }
 
 .infoItem h4 {
   margin: 0;
   font-size: 16px;
-  color: #0dd;
+  color: #00ffbf;
 }
 
 .infoItem p {
@@ -54,9 +58,9 @@
   color: #ccc;
 }
 
-/* FORM */
+/* Form section */
 .form {
-  width: 50%;
+  flex: 1 1 400px;
   display: flex;
   flex-direction: column;
   gap: 15px;
@@ -65,13 +69,20 @@
 .input,
 .textarea {
   width: 100%;
-  padding: 10px 12px;
-  border: 1px solid #0dd;
+  padding: 12px 14px;
+  border: 1px solid #00ffbf;
   background: transparent;
   color: white;
   border-radius: 6px;
   outline: none;
   font-size: 14px;
+  transition: border 0.3s, box-shadow 0.3s;
+}
+
+.input:focus,
+.textarea:focus {
+  border-color: #00e6b8;
+  box-shadow: 0 0 10px rgba(0, 230, 184, 0.5);
 }
 
 .input::placeholder,
@@ -86,10 +97,10 @@
 
 .sendBtn {
   width: 120px;
-  padding: 8px 0;
-  border: 1px solid #0dd;
+  padding: 10px 0;
+  border: 1px solid #00ffbf;
   background: transparent;
-  color: #0dd;
+  color: #00ffbf;
   border-radius: 6px;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -97,7 +108,7 @@
 }
 
 .sendBtn:hover {
-  background: #0dd;
+  background: #00ffbf;
   color: black;
   transform: scale(1.05);
   box-shadow: 0 0 15px rgba(0, 221, 221, 0.5);
@@ -109,17 +120,37 @@
   margin-top: 10px;
 }
 
-/* RESPONSIVE */
+/* ---------- RESPONSIVE ---------- */
 @media (max-width: 900px) {
   .container {
     flex-direction: column;
-    text-align: center;
+    align-items: center;
+    gap: 30px;
+    margin: 0 20px;
   }
+
   .info,
   .form {
+    flex: none;
     width: 100%;
+    text-align: center;
   }
+
+  .infoItem {
+    justify-content: center;
+    flex-direction: column;
+    gap: 5px;
+  }
+
   .sendBtn {
     align-self: center;
+  }
+
+  .title {
+    font-size: 28px;
+  }
+
+  .subtitle {
+    font-size: 13px;
   }
 }
