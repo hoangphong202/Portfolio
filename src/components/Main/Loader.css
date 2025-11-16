@@ -1,8 +1,8 @@
 /* From Uiverse.io by Nawsome */
 /* Loader.css */
 .svg-frame {
-  width: 400px; /* tăng kích thước từ 200px mặc định lên 400px */
-  height: 400px;
+  width: 300px; /* tăng kích thước từ 200px mặc định lên 400px */
+  height: 300px;
   display: flex;
   justify-content: center;
   align-items: center;

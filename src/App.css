@@ -16,7 +16,7 @@ html {
 /* Áp dụng cho toàn bộ trang */
 ::-webkit-scrollbar {
   width: 10px; /* độ rộng thanh cuộn dọc */
-  height: 10px; /* độ cao thanh cuộn ngang */
+  height: 0; /* độ cao thanh cuộn ngang */
 }
 
 ::-webkit-scrollbar-track {
