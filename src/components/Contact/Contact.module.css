@@ -129,11 +129,24 @@
     margin: 0 20px;
   }
 
+  .input,
+  .textarea {
+    padding: 12px 0;
+  }
+
+  .input::placeholder,
+  .textarea::placeholder {
+    padding-left: 12px;
+  }
+
+  /* SỬA LỖI LỆCH FORM Ở ĐÂY */
   .info,
   .form {
+    padding: 0 20px; /* sửa từ padding-right: 20px; thành padding đều */
     flex: none;
     width: 100%;
     text-align: center;
+    box-sizing: border-box; /* tránh tràn width */
   }
 
   .infoItem {

@@ -69,3 +69,16 @@
     margin: 0;
   }
 }
+@media (max-width: 320px) {
+  .container {
+    justify-content: center;
+  }
+
+  .container h1 {
+    text-align: center;
+    flex: 0 1 auto;
+    width: auto;
+    margin: 0;
+    font-size: 1.6em;
+  }
+}
