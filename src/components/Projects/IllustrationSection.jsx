@@ -11,6 +11,10 @@ import char5 from "../../assets/illustrations/character/5.png";
 import char6 from "../../assets/illustrations/character/6.png";
 import char7 from "../../assets/illustrations/character/7.png";
 import char8 from "../../assets/illustrations/character/8.png";
+import char9 from "../../assets/illustrations/character/9.png";
+import char10 from "../../assets/illustrations/character/10.png";
+import char11 from "../../assets/illustrations/character/11.png";
+import char12 from "../../assets/illustrations/character/12.png";
 
 // Background
 import bg1 from "../../assets/illustrations/background/1.png";
@@ -20,6 +24,8 @@ import bg4 from "../../assets/illustrations/background/4.png";
 import bg5 from "../../assets/illustrations/background/5.png";
 import bg6 from "../../assets/illustrations/background/6.png";
 import bg7 from "../../assets/illustrations/background/7.png";
+import bg8 from "../../assets/illustrations/background/8.png";
+import bg9 from "../../assets/illustrations/background/9.png";
 
 // Sketch / Line
 import line1 from "../../assets/illustrations/line/1.png";
@@ -28,6 +34,10 @@ import line3 from "../../assets/illustrations/line/3.png";
 import line4 from "../../assets/illustrations/line/4.png";
 import line5 from "../../assets/illustrations/line/5.png";
 import line6 from "../../assets/illustrations/line/6.png";
+import line7 from "../../assets/illustrations/line/7.png";
+import line8 from "../../assets/illustrations/line/8.png";
+import line9 from "../../assets/illustrations/line/9.png";
+import line10 from "../../assets/illustrations/line/10.png";
 
 const illustrations = [
   // Character
@@ -39,6 +49,10 @@ const illustrations = [
   { src: char4, category: "Character" },
   { src: char5, category: "Character" },
   { src: char7, category: "Character" },
+  { src: char9, category: "Character" },
+  { src: char10, category: "Character" },
+  { src: char11, category: "Character" },
+  { src: char12, category: "Character" },
 
   // Background
   { src: bg1, category: "Background" },
@@ -48,6 +62,8 @@ const illustrations = [
   { src: bg4, category: "Background" },
   { src: bg6, category: "Background" },
   { src: bg7, category: "Background" },
+  { src: bg8, category: "Background" },
+  { src: bg9, category: "Background" },
 
   // Sketch / Line
   { src: line1, category: "Sketch" },
@@ -56,6 +72,10 @@ const illustrations = [
   { src: line4, category: "Sketch" },
   { src: line5, category: "Sketch" },
   { src: line6, category: "Sketch" },
+  { src: line7, category: "Sketch" },
+  { src: line8, category: "Sketch" },
+  { src: line9, category: "Sketch" },
+  { src: line10, category: "Sketch" },
 ];
 
 const categories = ["All", "Character", "Background", "Sketch"];
