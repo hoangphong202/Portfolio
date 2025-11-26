@@ -10,6 +10,7 @@ import poster4 from "../../assets/design/poster/4.png";
 import poster5 from "../../assets/design/poster/5.png";
 import poster6 from "../../assets/design/poster/6.png";
 import poster7 from "../../assets/design/poster/7.jpg";
+import poster8 from "../../assets/design/poster/8.jpg";
 
 // Vocabulary
 import voc1 from "../../assets/design/vocabulary/1.png";
@@ -26,6 +27,7 @@ const illustrations = [
   { src: poster1, category: "Poster" },
   { src: poster2, category: "Poster" },
   { src: poster7, category: "Poster" },
+  { src: poster8, category: "Poster" },
   { src: poster3, category: "Poster" },
   { src: poster4, category: "Poster" },
   { src: poster5, category: "Poster" },
