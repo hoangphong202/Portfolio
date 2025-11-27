@@ -29,6 +29,7 @@ import bg9 from "../../assets/illustrations/background/9.png";
 import bg10 from "../../assets/illustrations/background/10.png";
 import bg11 from "../../assets/illustrations/background/11.jpg";
 import bg12 from "../../assets/illustrations/background/12.jpg";
+import bg13 from "../../assets/illustrations/background/13.png";
 
 // Sketch / Line
 import line1 from "../../assets/illustrations/line/1.png";
@@ -60,6 +61,7 @@ const illustrations = [
   // Background
   { src: bg1, category: "Background" },
   { src: bg5, category: "Background" },
+  { src: bg13, category: "Background" },
   { src: bg11, category: "Background" },
   { src: bg2, category: "Background" },
   { src: bg12, category: "Background" },
