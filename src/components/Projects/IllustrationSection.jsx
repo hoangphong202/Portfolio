@@ -71,7 +71,6 @@ const illustrations = [
   { src: bg7, category: "Background" },
   { src: bg8, category: "Background" },
   { src: bg9, category: "Background" },
-  { src: bg10, category: "Background" },
 
   // Sketch / Line
   { src: line1, category: "Sketch" },
@@ -86,11 +85,13 @@ const illustrations = [
   { src: line10, category: "Sketch" },
 ];
 
-const categories = ["All", "Character", "Background", "Sketch"];
+// const categories = ["All", "Character", "Background", "Sketch"];
+
+const categories = ["Background"];
 
 const IllustrationSection = () => {
   const [startIndex, setStartIndex] = useState(0);
-  const [selectedCategory, setSelectedCategory] = useState("All");
+  const [selectedCategory, setSelectedCategory] = useState("Background");
   const [lightbox, setLightbox] = useState({ open: false, src: "" });
   const [allRandom, setAllRandom] = useState([]);
 
