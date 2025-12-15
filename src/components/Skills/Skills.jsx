@@ -41,7 +41,7 @@ function Skills(props) {
       icon: <FaEllipsisH />,
       title: "OTHERS",
       description:
-        "Good at teamwork, communication, and time management. Skilled in problem-solving and adapting to new technologies. Familiar with Figma, Photoshop, Illustrator. Japanese level: JLPT N3.",
+        "Good at teamwork, communication, and time management. Skilled in problem-solving and adapting to new technologies. Familiar with Figma, Photoshop, Illustrator. Japanese level: JLPT N3 equivalent.",
     },
   ];
 
