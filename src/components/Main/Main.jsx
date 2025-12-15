@@ -34,7 +34,7 @@ function Main(props) {
         </p>
 
         <div className={styles.btn_container}>
-          <Btn onClick={() => window.open("https://drive.google.com/file/d/1YhkjdcALascqjf-Z742EU5orzYm1JSjO/view?usp=drive_link", "_blank")}>View CV</Btn>{" "}
+          <Btn onClick={() => window.open("https://drive.google.com/file/d/1l88KEImCyufyLyd0p4UA2junpaAMKumE/view", "_blank")}>View CV</Btn>{" "}
           <a href="https://github.com/hoangphong202" target="_blank" rel="noopener noreferrer" className={styles.github_icon}>
             <i className="fab fa-github"></i>
           </a>
