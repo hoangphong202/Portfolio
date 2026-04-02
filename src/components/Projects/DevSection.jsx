@@ -21,6 +21,14 @@ import shop2 from "../../assets/projects/shopanime/2.jpg";
 
 import p1 from "../../assets/projects/portfolio/1p.png";
 
+import g1 from "../../assets/projects/game/g1.png";
+import g2 from "../../assets/projects/game/g2.png";
+import g3 from "../../assets/projects/game/g3.png";
+import g4 from "../../assets/projects/game/g4.png";
+import g5 from "../../assets/projects/game/g5.png";
+import g6 from "../../assets/projects/game/g6.png";
+import g7 from "../../assets/projects/game/g7.png";
+
 const DevSection = () => {
   const [selectedProject, setSelectedProject] = useState(null);
 
@@ -56,6 +64,13 @@ const DevSection = () => {
       images: [p1],
       githubFE: "https://github.com/hoangphong202/Portfolio",
       link: "https://hoangphong202.github.io/Portfolio/",
+    },
+    {
+      title: "Game bullet hell",
+      desc: "A 2D bullet hell game inspired by Touhou Project and Just Shapes & Beats, focusing on precise movement, bullet dodging, and skill-based gameplay.",
+      tags: ["Unity", "C#"],
+      images: [g1, g2, g3, g4, g5, g6, g7],
+      link: "https://hoangphong202.github.io/BULLET-HELL",
     },
   ];
 
