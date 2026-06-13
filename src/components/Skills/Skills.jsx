@@ -8,6 +8,7 @@ import DrawModal from "./DrawModal";
 import DesignModal from "./DesignModal";
 import UIDesignModal from "./UIDesignModal";
 import { IoGameControllerSharp } from "react-icons/io5";
+import GameModal from "./GameModal";
 
 Skills.propTypes = {};
 
@@ -64,6 +65,7 @@ function Skills(props) {
         ))}
       </div>
       {selectedSkill === "Web Developer" && <TechnologyModal isOpen onClose={() => setSelectedSkill(null)} />}
+      {selectedSkill === "Unity & 2D Game Art" && <GameModal isOpen onClose={() => setSelectedSkill(null)} />}
       {selectedSkill === "UI/UX Design" && <UIDesignModal isOpen onClose={() => setSelectedSkill(null)} />}
       {selectedSkill === "Graphic Design" && <DesignModal isOpen onClose={() => setSelectedSkill(null)} />}
       {selectedSkill === "Drawing / Illustration" && <DrawModal isOpen onClose={() => setSelectedSkill(null)} />}
