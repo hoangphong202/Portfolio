@@ -41,19 +41,18 @@ function About() {
           <div className={styles.bio_container}>
             <div className={styles.bio_text}>
               <p>
-                I am a <span className={styles.highlight}>Full-stack Developer</span> specializing in web development, capable of working on both <span className={styles.highlight}>Front-end</span>{" "}
-                and <span className={styles.highlight}>Back-end</span>.
+                I am a <span className={styles.highlight}>Full-stack Developer</span> specializing in web development, with experience in both <span className={styles.highlight}>Front-end</span> and{" "}
+                <span className={styles.highlight}>Back-end</span>.
               </p>
 
               <p>
-                I have experience with <span className={styles.highlight}>ReactJS</span>, <span className={styles.highlight}>Java (Spring Boot)</span>, building{" "}
-                <span className={styles.highlight}>RESTful APIs</span> and working with <span className={styles.highlight}>MySQL</span>, <span className={styles.highlight}>SQL Server</span>.
+                I have worked with <span className={styles.highlight}>ReactJS</span>, <span className={styles.highlight}>Java (Spring Boot)</span>, building{" "}
+                <span className={styles.highlight}>RESTful APIs</span> and working with <span className={styles.highlight}>MySQL</span> and <span className={styles.highlight}>SQL Server</span>. I
+                focus on building scalable and maintainable systems.
               </p>
 
-              <p>My IT background provides strong logical thinking and the ability to build scalable systems.</p>
-
               <p>
-                Currently, I hold a <span className={styles.highlight}>JLPT N3</span> and aim to work in a Japanese professional environment.
+                I hold a <span className={styles.highlight}>JLPT N3</span> and aim to develop my career in a Japanese professional environment.
               </p>
             </div>
           </div>
@@ -90,7 +89,7 @@ function About() {
 
           {/* BUTTON */}
           <div className={styles.btn_wrapper}>
-            <button className={styles.cv_button} onClick={() => window.open("https://drive.google.com/file/d/16hW8BTKjn0Ouxu9wQieI-6Tch5sYQsgZ/view", "_blank")}>
+            <button className={styles.cv_button} onClick={() => window.open("https://drive.google.com/file/d/1MvzXyczw6YygRxkQK15iAkUN4WIU8FTX/view?usp=sharing", "_blank")}>
               VIEW CV
             </button>
           </div>

@@ -7,6 +7,7 @@ import OrtherModal from "./OrtherModal";
 import DrawModal from "./DrawModal";
 import DesignModal from "./DesignModal";
 import UIDesignModal from "./UIDesignModal";
+import { IoGameControllerSharp } from "react-icons/io5";
 
 Skills.propTypes = {};
 
@@ -17,31 +18,32 @@ function Skills(props) {
     {
       icon: <FaCode />,
       title: "Web Developer",
-      description:
-        "I'm capable of developing complete web applications on both Front-end and Back-end. My main technologies include ReactJS, Node.js, and Java, which allow me to build efficient and scalable systems with clean and user-friendly interfaces.",
+      description: "Build web applications using ReactJS, Node.js, and Java. Focus on clean code and responsive interfaces.",
+    },
+    {
+      icon: <IoGameControllerSharp />,
+      title: "Unity & 2D Game Art",
+      description: "Create basic 2D game assets and implement simple gameplay in Unity. Interested in game development.",
     },
     {
       icon: <MdDesignServices />,
       title: "UI/UX Design",
-      description:
-        "With both design sense and coding skills, I can transform UI/UX ideas into interactive, responsive web interfaces. I focus on building designs that are visually appealing, accessible, and consistent across devices.",
+      description: "Design clean and responsive interfaces with a focus on usability and visual consistency.",
     },
     {
       icon: <FaPaintBrush />,
       title: "Graphic Design",
-      description: "I have experience designing posters and visual content for clubs and events. I focus on creating clean, aesthetic designs that clearly convey messages and enhance visual appeal.",
+      description: "Design posters and visual content with clear layout and strong visual appeal.",
     },
     {
       icon: <FaPalette />,
       title: "Drawing / Illustration",
-      description:
-        "I enjoy drawing anime characters and backgrounds, focusing on color harmony and mood. This hobby strengthens my creativity and visual sense, which supports my design and front-end work.",
+      description: "Draw anime-style characters and backgrounds, focusing on color and mood.",
     },
     {
       icon: <FaEllipsisH />,
-      title: "OTHERS",
-      description:
-        "Good at teamwork, communication, and time management. Skilled in problem-solving and adapting to new technologies. Familiar with Figma, Photoshop, Illustrator. Japanese level: JLPT N3 equivalent.",
+      title: "Others",
+      description: "Teamwork, problem-solving, and adaptability. JLPT N3. Familiar with Figma, Photoshop, Illustrator, and Microsoft Office tools.",
     },
   ];
 
@@ -65,7 +67,7 @@ function Skills(props) {
       {selectedSkill === "UI/UX Design" && <UIDesignModal isOpen onClose={() => setSelectedSkill(null)} />}
       {selectedSkill === "Graphic Design" && <DesignModal isOpen onClose={() => setSelectedSkill(null)} />}
       {selectedSkill === "Drawing / Illustration" && <DrawModal isOpen onClose={() => setSelectedSkill(null)} />}
-      {selectedSkill === "OTHERS" && <OrtherModal isOpen onClose={() => setSelectedSkill(null)} />}
+      {selectedSkill === "Others" && <OrtherModal isOpen onClose={() => setSelectedSkill(null)} />}
     </section>
   );
 }

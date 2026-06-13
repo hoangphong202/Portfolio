@@ -29,12 +29,12 @@ function Main(props) {
         </h2>
 
         <p className={styles.description}>
-          I am a technology and design enthusiast, always looking to create products that not only work well but also have high aesthetics. I am capable of working in both Front-end and Back-end, love
-          to continuously learn and wish to develop my career in Japan.
+          I am a developer passionate about building interactive and visually engaging web experiences. I focus on responsive interfaces, animations, and game-like interactions. I am motivated to grow
+          and contribute to creative game projects.
         </p>
 
         <div className={styles.btn_container}>
-          <Btn onClick={() => window.open("https://drive.google.com/file/d/16hW8BTKjn0Ouxu9wQieI-6Tch5sYQsgZ/view?usp=drive_link", "_blank")}>View CV</Btn>{" "}
+          <Btn onClick={() => window.open("https://drive.google.com/file/d/1MvzXyczw6YygRxkQK15iAkUN4WIU8FTX/view?usp=sharing", "_blank")}>View CV</Btn>{" "}
           <a href="https://github.com/hoangphong202" target="_blank" rel="noopener noreferrer" className={styles.github_icon}>
             <i className="fab fa-github"></i>
           </a>

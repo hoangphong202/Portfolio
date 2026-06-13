@@ -34,6 +34,13 @@ const DevSection = () => {
 
   const projects = [
     {
+      title: "Game bullet hell",
+      desc: "A 2D bullet hell game inspired by Touhou Project and Just Shapes & Beats, focusing on precise movement, bullet dodging, and skill-based gameplay.",
+      tags: ["Unity", "C#"],
+      images: [g1, g2, g3, g4, g5, g6, g7],
+      link: "https://hoangphong202.github.io/BULLET-HELL",
+    },
+    {
       title: "WeatherChill",
       desc: "WeatherChill is a relaxing web app that blends music, visuals, and motion effects to create a chill and immersive experience.",
       tags: ["HTML", "CSS", "JS", "Java"],
@@ -64,13 +71,6 @@ const DevSection = () => {
       images: [p1],
       githubFE: "https://github.com/hoangphong202/Portfolio",
       link: "https://hoangphong202.github.io/Portfolio/",
-    },
-    {
-      title: "Game bullet hell",
-      desc: "A 2D bullet hell game inspired by Touhou Project and Just Shapes & Beats, focusing on precise movement, bullet dodging, and skill-based gameplay.",
-      tags: ["Unity", "C#"],
-      images: [g1, g2, g3, g4, g5, g6, g7],
-      link: "https://hoangphong202.github.io/BULLET-HELL",
     },
   ];
 

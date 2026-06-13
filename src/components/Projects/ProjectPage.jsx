@@ -26,10 +26,10 @@ const ProjectPage = () => {
             <span>Design</span>
           </button>
 
-          {/* <button onClick={() => setActiveTab("illustration")} className={`${styles.tab} ${activeTab === "illustration" ? styles.active : ""}`}>
+          <button onClick={() => setActiveTab("illustration")} className={`${styles.tab} ${activeTab === "illustration" ? styles.active : ""}`}>
             <Image size={20} />
             <span>Illustration</span>
-          </button> */}
+          </button>
         </div>
       </div>
 

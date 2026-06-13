@@ -2,6 +2,15 @@ import React, { useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import styles from "./IllustrationSection.module.css";
 
+//game
+import g1 from "../../assets/illustrations/game/1.png";
+import g2 from "../../assets/illustrations/game/2.png";
+import g3 from "../../assets/illustrations/game/3.png";
+import g4 from "../../assets/illustrations/game/4.png";
+import g5 from "../../assets/illustrations/game/5.png";
+import g6 from "../../assets/illustrations/game/6.png";
+import g7 from "../../assets/illustrations/game/7.png";
+
 // Character
 import char1 from "../../assets/illustrations/character/1.png";
 import char2 from "../../assets/illustrations/character/2.png";
@@ -44,6 +53,14 @@ import line9 from "../../assets/illustrations/line/9.png";
 import line10 from "../../assets/illustrations/line/10.png";
 
 const illustrations = [
+  { src: g1, category: "Game ART" },
+  { src: g2, category: "Game ART" },
+  { src: g3, category: "Game ART" },
+  { src: g4, category: "Game ART" },
+  { src: g5, category: "Game ART" },
+  { src: g6, category: "Game ART" },
+  { src: g7, category: "Game ART" },
+
   // Character
   { src: char6, category: "Character" },
   { src: char8, category: "Character" },
@@ -88,11 +105,11 @@ const illustrations = [
 
 // const categories = ["All", "Character", "Background", "Sketch"];
 
-const categories = ["Background"];
+const categories = ["Game ART"];
 
 const IllustrationSection = () => {
   const [startIndex, setStartIndex] = useState(0);
-  const [selectedCategory, setSelectedCategory] = useState("Background");
+  const [selectedCategory, setSelectedCategory] = useState("Game ART");
   const [lightbox, setLightbox] = useState({ open: false, src: "" });
   const [allRandom, setAllRandom] = useState([]);
 
