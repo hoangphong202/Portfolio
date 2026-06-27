@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import DevModal from "./DevModal";
 import styles from "./DevSection.module.css";
 
+import m1 from "../../assets/projects/MyWallpaper/1.png";
+import m2 from "../../assets/projects/MyWallpaper/2.png";
+
 import wc1 from "../../assets/projects/weatherchill/1.png";
 import wc2 from "../../assets/projects/weatherchill/2.png";
 import wc3 from "../../assets/projects/weatherchill/3.png";
@@ -34,43 +37,52 @@ const DevSection = () => {
 
   const projects = [
     {
-      title: "Game bullet hell",
-      desc: "A 2D bullet hell game inspired by Touhou Project and Just Shapes & Beats, focusing on precise movement, bullet dodging, and skill-based gameplay.",
-      tags: ["Unity", "C#"],
-      images: [g1, g2, g3, g4, g5, g6, g7],
-      link: "https://hoangphong202.github.io/BULLET-HELL",
+      title: "Website MyWallpaper",
+      desc: "Developed a responsive anime wallpaper website using ReactJS with category filtering, search functionality, artwork detail pages, reusable components, and a modern dark-themed UI.",
+      tags: ["HTML", "CSS", "ReactJS", "Vite", "Cloudinary"],
+      images: [m1, m2],
+      githubFE: "https://github.com/hoangphong202/MyWallpaper",
+      link: "https://hoangphong202.github.io/MyWallpaper/",
     },
     {
-      title: "WeatherChill",
+      title: "Website WeatherChill",
       desc: "WeatherChill is a relaxing web app that blends music, visuals, and motion effects to create a chill and immersive experience.",
-      tags: ["HTML", "CSS", "JS", "Java"],
+      tags: ["HTML", "CSS", "JavaScript", "Java"],
       images: [wc2, wc1, wc6, wc3, wc4, wc5, wc7],
       // link: "https://your-demo-link.com",
       githubBE: "https://github.com/hoangphong202/WeatherChill",
     },
     {
-      title: "Nihongo Learning",
+      title: "Website Nihongo Learning",
       desc: "An interactive web app for learning Japanese, featuring vocabulary practice, grammar lessons, quizzes, and a clean, user-friendly interface.",
-      tags: ["HTML", "CSS", "ReactJS", "Java"],
+      tags: ["HTML", "CSS", "ReactJS", "JavaScript", "Java"],
       images: [nihon1, nihon2, nihon3, nihon4, nihon5],
       githubFE: "https://github.com/hoangphong202/japan_fe",
       githubBE: "https://github.com/hoangphong202/japan_be",
     },
     {
-      title: "Shop Anime",
+      title: "Website Shop Anime",
       desc: "An online anime store offering figures, apparel, and collectibles with a fun and immersive shopping experience.",
-      tags: ["HTML", "CSS", "ReactJS", "Java"],
+      tags: ["HTML", "CSS", "ReactJS", "JavaScript", "Java"],
       images: [shop1, shop2],
       githubFE: "https://github.com/hoangphong202/ShopAnimeFE",
       githubBE: "https://github.com/hoangphong202/ShopAnime",
     },
     {
-      title: "Portfolio",
+      title: "Website Portfolio",
       desc: "Showcasing my projects and creative work, including web development and design.",
       tags: ["HTML", "CSS", "ReactJS"],
       images: [p1],
       githubFE: "https://github.com/hoangphong202/Portfolio",
       link: "https://hoangphong202.github.io/Portfolio/",
+    },
+
+    {
+      title: "Game bullet hell",
+      desc: "A 2D bullet hell game inspired by Touhou Project and Just Shapes & Beats, focusing on precise movement, bullet dodging, and skill-based gameplay.",
+      tags: ["Unity", "C#"],
+      images: [g1, g2, g3, g4, g5, g6, g7],
+      link: "https://hoangphong202.github.io/BULLET-HELL",
     },
   ];
 
