@@ -1,4 +1,6 @@
+
 import React, { useState } from "react";
+import { useTranslation } from "react-i18next";
 import DevModal from "./DevModal";
 import styles from "./DevSection.module.css";
 
@@ -32,73 +34,88 @@ import g5 from "../../assets/projects/game/g5.png";
 import g6 from "../../assets/projects/game/g6.png";
 import g7 from "../../assets/projects/game/g7.png";
 
+const projects = [
+  {
+    id: "myWallpaper",
+    tags: ["HTML", "CSS", "ReactJS", "Vite", "Cloudinary"],
+    images: [m1, m2],
+    githubFE: "https://github.com/hoangphong202/MyWallpaper",
+    link: "https://hoangphong202.github.io/MyWallpaper/",
+  },
+  {
+    id: "weatherChill",
+    tags: ["HTML", "CSS", "JavaScript", "Java"],
+    images: [wc2, wc1, wc6, wc3, wc4, wc5, wc7],
+    githubBE: "https://github.com/hoangphong202/WeatherChill",
+  },
+  {
+    id: "nihongo",
+    tags: ["HTML", "CSS", "ReactJS", "JavaScript", "Java"],
+    images: [nihon1, nihon2, nihon3, nihon4, nihon5],
+    githubFE: "https://github.com/hoangphong202/japan_fe",
+    githubBE: "https://github.com/hoangphong202/japan_be",
+  },
+  {
+    id: "shopAnime",
+    tags: ["HTML", "CSS", "ReactJS", "JavaScript", "Java"],
+    images: [shop1, shop2],
+    githubFE: "https://github.com/hoangphong202/ShopAnimeFE",
+    githubBE: "https://github.com/hoangphong202/ShopAnime",
+  },
+  {
+    id: "portfolio",
+    tags: ["HTML", "CSS", "ReactJS"],
+    images: [p1],
+    githubFE: "https://github.com/hoangphong202/Portfolio",
+    link: "https://hoangphong202.github.io/Portfolio/",
+  },
+  {
+    id: "bulletHell",
+    tags: ["Unity", "C#"],
+    images: [g1, g2, g3, g4, g5, g6, g7],
+    link: "https://hoangphong202.github.io/BULLET-HELL",
+  },
+];
+
 const DevSection = () => {
+  const { t } = useTranslation();
   const [selectedProject, setSelectedProject] = useState(null);
 
-  const projects = [
-    {
-      title: "Website MyWallpaper",
-      desc: "Developed a responsive anime wallpaper website using ReactJS with category filtering, search functionality, artwork detail pages, reusable components, and a modern dark-themed UI.",
-      tags: ["HTML", "CSS", "ReactJS", "Vite", "Cloudinary"],
-      images: [m1, m2],
-      githubFE: "https://github.com/hoangphong202/MyWallpaper",
-      link: "https://hoangphong202.github.io/MyWallpaper/",
-    },
-    {
-      title: "Website WeatherChill",
-      desc: "WeatherChill is a relaxing web app that blends music, visuals, and motion effects to create a chill and immersive experience.",
-      tags: ["HTML", "CSS", "JavaScript", "Java"],
-      images: [wc2, wc1, wc6, wc3, wc4, wc5, wc7],
-      // link: "https://your-demo-link.com",
-      githubBE: "https://github.com/hoangphong202/WeatherChill",
-    },
-    {
-      title: "Website Nihongo Learning",
-      desc: "An interactive web app for learning Japanese, featuring vocabulary practice, grammar lessons, quizzes, and a clean, user-friendly interface.",
-      tags: ["HTML", "CSS", "ReactJS", "JavaScript", "Java"],
-      images: [nihon1, nihon2, nihon3, nihon4, nihon5],
-      githubFE: "https://github.com/hoangphong202/japan_fe",
-      githubBE: "https://github.com/hoangphong202/japan_be",
-    },
-    {
-      title: "Website Shop Anime",
-      desc: "An online anime store offering figures, apparel, and collectibles with a fun and immersive shopping experience.",
-      tags: ["HTML", "CSS", "ReactJS", "JavaScript", "Java"],
-      images: [shop1, shop2],
-      githubFE: "https://github.com/hoangphong202/ShopAnimeFE",
-      githubBE: "https://github.com/hoangphong202/ShopAnime",
-    },
-    {
-      title: "Website Portfolio",
-      desc: "Showcasing my projects and creative work, including web development and design.",
-      tags: ["HTML", "CSS", "ReactJS"],
-      images: [p1],
-      githubFE: "https://github.com/hoangphong202/Portfolio",
-      link: "https://hoangphong202.github.io/Portfolio/",
-    },
-
-    {
-      title: "Game bullet hell",
-      desc: "A 2D bullet hell game inspired by Touhou Project and Just Shapes & Beats, focusing on precise movement, bullet dodging, and skill-based gameplay.",
-      tags: ["Unity", "C#"],
-      images: [g1, g2, g3, g4, g5, g6, g7],
-      link: "https://hoangphong202.github.io/BULLET-HELL",
-    },
-  ];
+  // Translate project content according to the selected language
+  const translatedProjects = projects.map((project) => ({
+    ...project,
+    title: t(`devSection.projects.${project.id}.title`),
+    desc: t(`devSection.projects.${project.id}.description`),
+  }));
 
   return (
     <div className={styles.devContainer}>
-      {projects.map((p, i) => (
-        <div key={i} className={styles.card} onClick={() => setSelectedProject(p)}>
+      {translatedProjects.map((project) => (
+        <div
+          key={project.id}
+          className={styles.card}
+          onClick={() => setSelectedProject(project)}
+        >
           <div className={styles.imageWrapper}>
-            <img src={p.images[0]} alt={p.title} className={styles.image} />
+            <img
+              src={project.images[0]}
+              alt={project.title}
+              className={styles.image}
+            />
           </div>
+
           <div className={styles.cardContent}>
-            <h3 className={styles.cardTitle}>{p.title}</h3>
-            <p className={styles.cardDesc}>{p.desc}</p>
+            <h3 className={styles.cardTitle}>
+              {project.title}
+            </h3>
+
+            <p className={styles.cardDesc}>
+              {project.desc}
+            </p>
+
             <div className={styles.tagRow}>
-              {p.tags.map((tag, idx) => (
-                <span key={idx} className={styles.tag}>
+              {project.tags.map((tag) => (
+                <span key={tag} className={styles.tag}>
                   {tag}
                 </span>
               ))}
@@ -107,8 +124,12 @@ const DevSection = () => {
         </div>
       ))}
 
-      {/* modal hiển thị chi tiết */}
-      {selectedProject && <DevModal project={selectedProject} onClose={() => setSelectedProject(null)} />}
+      {selectedProject && (
+        <DevModal
+          project={selectedProject}
+          onClose={() => setSelectedProject(null)}
+        />
+      )}
     </div>
   );
 };

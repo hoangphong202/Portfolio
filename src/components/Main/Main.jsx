@@ -1,49 +1,62 @@
+
 import React from "react";
 import { ReactTyped } from "react-typed";
+import { useTranslation } from "react-i18next";
 import styles from "./Main.module.css";
 import Btn from "../Button/Btn";
-// import avatar from "../../assets/avatar.png";
 import Loader from "./Loader.jsx";
 
-Main.propTypes = {};
+function Main() {
+  const { t } = useTranslation();
 
-function Main(props) {
   return (
     <div id="home" className={styles.main_container}>
       <div className={styles.container}>
         <p className={styles.hello}>
-          Hello, I'm <span>Hoang Trung Phong</span>
+          {t("main.hello")} <span>{t("main.name")}</span>
         </p>
 
         <h2 className={styles.title}>
-          I'm a{" "}
+          {t("main.imA")}{" "}
           <span>
             <ReactTyped
-              strings={["Designer", "Developer"]}
+              strings={t("main.roles", { returnObjects: true })}
               typeSpeed={100}
               backSpeed={60}
-              backDelay={1500} // thời gian dừng trước khi xóa (ms)
+              backDelay={1500}
               loop
             />
           </span>
         </h2>
 
         <p className={styles.description}>
-          I am a developer passionate about building interactive and visually engaging web experiences. I focus on responsive interfaces, animations, and game-like interactions. I am motivated to grow
-          and contribute to creative game projects.
+          {t("main.description")}
         </p>
 
         <div className={styles.btn_container}>
-          <Btn onClick={() => window.open("https://drive.google.com/file/d/1MvzXyczw6YygRxkQK15iAkUN4WIU8FTX/view?usp=sharing", "_blank")}>View CV</Btn>{" "}
-          <a href="https://github.com/hoangphong202" target="_blank" rel="noopener noreferrer" className={styles.github_icon}>
+          <Btn
+            onClick={() =>
+              window.open(
+                "https://drive.google.com/file/d/1MvzXyczw6YygRxkQK15iAkUN4WIU8FTX/view?usp=sharing",
+                "_blank",
+                "noopener,noreferrer"
+              )
+            }
+          >
+            {t("main.viewCV")}
+          </Btn>{" "}
+
+          <a
+            href="https://github.com/hoangphong202"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.github_icon}
+            aria-label="GitHub"
+          >
             <i className="fab fa-github"></i>
           </a>
         </div>
       </div>
-
-      {/* <div className={styles.intro_image}>
-        <img src={avatar} alt="avatar" />
-      </div> */}
 
       <Loader />
     </div>

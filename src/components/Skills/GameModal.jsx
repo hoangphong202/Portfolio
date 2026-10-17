@@ -3,10 +3,10 @@ import { MdClose } from "react-icons/md";
 import { FaPaintBrush } from "react-icons/fa";
 import styles from "./GameModal.module.css";
 import u from "../../assets/logo/game/unity.png";
-// import { useTranslation } from "react-i18next";
+import { useTranslation } from "react-i18next";
 
 function GameModal({ isOpen, onClose }) {
-  // const { t } = useTranslation();
+  const { t } = useTranslation();
   if (!isOpen) return null;
 
   return (
@@ -17,7 +17,7 @@ function GameModal({ isOpen, onClose }) {
           <div className={styles.modalHeader}>
             <div className={styles.techTitle}>
               <FaPaintBrush className={styles.techIcon} />
-              <h2>Unity & 2D Game Art</h2>
+              <h2>{t("skills.items.game.title")}</h2>
             </div>
           </div>
         </div>
@@ -25,7 +25,7 @@ function GameModal({ isOpen, onClose }) {
         <hr className={styles.modalDivider} />
 
         <div className={styles.techSection}>
-          <h3>Tools</h3>
+          <h3>{t("skills.items.game.tools")}</h3>
           <div className={styles.iconGrid}>
             <div>
               <img src={u} alt="Unity" loading="lazy" className={styles.imgLogo} />

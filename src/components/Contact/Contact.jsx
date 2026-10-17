@@ -1,12 +1,24 @@
+
 import React, { useState } from "react";
+import { useTranslation } from "react-i18next";
 import styles from "./Contact.module.css";
 import { FiMail } from "react-icons/fi";
 import { FaMapMarkerAlt, FaPhoneAlt } from "react-icons/fa";
 
 const Contact = () => {
-  const [form, setForm] = useState({ name: "", email: "", message: "" });
+  const { t } = useTranslation();
 
-  const handleChange = (e) => setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const handleChange = (e) =>
+    setForm((prev) => ({
+      ...prev,
+      [e.target.name]: e.target.value,
+    }));
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -15,8 +27,8 @@ const Contact = () => {
 
   return (
     <section className={styles.contactSection} id="contact">
-      <h2 className={styles.title}>CONTACT</h2>
-      <p className={styles.subtitle}>Let’s connect and collaborate</p>
+      <h2 className={styles.title}>{t("contact.title")}</h2>
+      <p className={styles.subtitle}>{t("contact.subtitle")}</p>
 
       <div className={styles.container}>
         {/* LEFT INFO */}
@@ -24,7 +36,7 @@ const Contact = () => {
           <div className={styles.infoItem}>
             <FiMail size={22} />
             <div>
-              <h4>Email</h4>
+              <h4>{t("contact.email")}</h4>
               <p>hoangtrungphongit202@gmail.com</p>
             </div>
           </div>
@@ -32,7 +44,7 @@ const Contact = () => {
           <div className={styles.infoItem}>
             <FaPhoneAlt size={22} />
             <div>
-              <h4>Phone Number</h4>
+              <h4>{t("contact.phone")}</h4>
               <p>0356344088</p>
             </div>
           </div>
@@ -40,21 +52,50 @@ const Contact = () => {
           <div className={styles.infoItem}>
             <FaMapMarkerAlt size={22} />
             <div>
-              <h4>Location</h4>
-              <p>Ho Chi Minh City</p>
+              <h4>{t("contact.location")}</h4>
+              <p>{t("contact.city")}</p>
             </div>
           </div>
         </div>
 
         {/* RIGHT FORM */}
         <form className={styles.form} onSubmit={handleSubmit}>
-          <input type="text" name="name" placeholder="Name" className={styles.input} value={form.name} onChange={handleChange} />
-          <input type="email" name="email" placeholder="Email" className={styles.input} value={form.email} onChange={handleChange} />
-          <textarea name="message" placeholder="Message..." className={styles.textarea} value={form.message} onChange={handleChange} />
+          <input
+            type="text"
+            name="name"
+            placeholder={t("contact.namePlaceholder")}
+            aria-label={t("contact.namePlaceholder")}
+            className={styles.input}
+            value={form.name}
+            onChange={handleChange}
+          />
+
+          <input
+            type="email"
+            name="email"
+            placeholder={t("contact.emailPlaceholder")}
+            aria-label={t("contact.emailPlaceholder")}
+            className={styles.input}
+            value={form.email}
+            onChange={handleChange}
+          />
+
+          <textarea
+            name="message"
+            placeholder={t("contact.messagePlaceholder")}
+            aria-label={t("contact.messagePlaceholder")}
+            className={styles.textarea}
+            value={form.message}
+            onChange={handleChange}
+          />
+
           <button type="submit" className={styles.sendBtn}>
-            Send
+            {t("contact.send")}
           </button>
-          <p className={styles.notice}>*This is a UI demo — the form does not send email.</p>
+
+          <p className={styles.notice}>
+            {t("contact.notice")}
+          </p>
         </form>
       </div>
     </section>

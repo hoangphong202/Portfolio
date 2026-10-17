@@ -3,8 +3,10 @@ import { MdClose } from "react-icons/md";
 import { FaPaintBrush } from "react-icons/fa";
 import styles from "./DesignModal.module.css";
 import fm from "../../assets/logo/design/fm.png";
+import { useTranslation } from "react-i18next";
 
 function UIDesignModal({ isOpen, onClose }) {
+  const { t } = useTranslation();
   if (!isOpen) return null;
 
   return (
@@ -15,7 +17,7 @@ function UIDesignModal({ isOpen, onClose }) {
           <div className={styles.modalHeader}>
             <div className={styles.techTitle}>
               <FaPaintBrush className={styles.techIcon} />
-              <h2>UI/UX Design</h2>
+              <h2>{t("skills.items.uiux.title")}</h2>
             </div>
           </div>
         </div>
@@ -23,7 +25,7 @@ function UIDesignModal({ isOpen, onClose }) {
         <hr className={styles.modalDivider} />
 
         <div className={styles.techSection}>
-          <h3>Tools</h3>
+          <h3>{t("skills.items.uiux.tools")}</h3>
           <div className={styles.iconGrid}>
             <div>
               <img src={fm} alt="Live 2D" loading="lazy" className={styles.imgLogo} />

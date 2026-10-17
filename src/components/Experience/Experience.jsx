@@ -1,23 +1,19 @@
+
+import { useTranslation } from "react-i18next";
 import styles from "./Experience.module.css";
+import fullbridge from "../../assets/logo/company/fullbridge.png";
+import urban from "../../assets/logo/company/urban.png";
+import ohstem from "../../assets/logo/company/ohstem.jpg";
 
 const experiences = [
   {
+    id: "fullbridge",
     year: "2025 — PRESENT",
     role: "DPP DESIGNER",
     company: "Fullbridge",
-    logo: "/images/company/fullbridge.png",
-
-    description:
-      "Working on DPP production, artwork preparation and prepress tasks for production-ready files.",
-
-    responsibilities: [
-      "Prepare and adjust design files for production",
-      "Work with artwork and production requirements",
-      "Check layout, typography and technical details",
-      "Prepare files for final output",
-      "Handle design adjustments and production revisions",
-    ],
-
+    logo: fullbridge,
+    descriptionKey: "fullbridge.description",
+    responsibilitiesKey: "fullbridge.responsibilities",
     skills: [
       "DPP Production",
       "Prepress",
@@ -25,32 +21,20 @@ const experiences = [
       "Illustrator",
       "InDesign",
     ],
-
-    images: [
-      "/images/fullbridge/work-1.jpg",
-      "/images/fullbridge/work-2.jpg",
-    ],
+    // images: [
+    //   "/images/fullbridge/work-1.jpg",
+    //   "/images/fullbridge/work-2.jpg",
+    // ],
   },
-
   {
+    id: "ohstem",
     year: "08/2024 — 10/2024",
     role: "INTERN — FRONT-END DEVELOPER",
     company: "0hStem Company",
-    logo: "/images/company/0hstem.png",
-
-    project: "Competition Management Website",
-
-    description:
-      "Worked as a Front-end Developer, focusing on interface development, UI optimization and bug fixing.",
-
-    responsibilities: [
-      "Develop website interfaces from project requirements",
-      "Build and adjust front-end components",
-      "Optimize UI layout and user experience",
-      "Identify and fix UI-related bugs",
-      "Work with the team during development",
-    ],
-
+    logo: ohstem,
+    projectKey: "ohstem.project",
+    descriptionKey: "ohstem.description",
+    responsibilitiesKey: "ohstem.responsibilities",
     skills: [
       "ReactJS",
       "Front-end",
@@ -59,27 +43,15 @@ const experiences = [
       "Bug Fixing",
     ],
   },
-
   {
+    id: "urban",
     year: "04/2024 — 07/2024",
     role: "INTERN — FRONT-END / BACK-END",
     company: "Urban VietNam Co.,Ltd",
-    logo: "/images/company/urban-vietnam.png",
-
-    project: "Personnel Management Website",
-
-    description:
-      "Worked mainly on Front-end development while supporting Back-end tasks for a personnel management system.",
-
-    responsibilities: [
-      "Develop employee management interfaces",
-      "Build CRUD functions for employee data",
-      "Integrate RESTful APIs",
-      "Implement image upload functionality",
-      "Support Back-end development",
-      "Work collaboratively in a team of 6",
-    ],
-
+    logo: urban,
+    projectKey: "urban.project",
+    descriptionKey: "urban.description",
+    responsibilitiesKey: "urban.responsibilities",
     skills: [
       "ReactJS",
       "RESTful API",
@@ -92,21 +64,18 @@ const experiences = [
 ];
 
 export default function Experience() {
+  const { t } = useTranslation();
+
   return (
     <section
       className={styles.experience_section}
       id="experience"
     >
-      {/* ================= HEADER ================= */}
-
       <div className={styles.experience_header}>
-
         <div>
-          <h2>WORK EXPERIENCE</h2>
+          <h2>{t("experience.title")}</h2>
         </div>
       </div>
-
-      {/* ================= TIMELINE ================= */}
 
       <div className={styles.timeline}>
         {experiences.map((item, index) => (
@@ -114,8 +83,6 @@ export default function Experience() {
             className={styles.experience_item}
             key={`${item.company}-${item.year}`}
           >
-            {/* ================= LEFT ================= */}
-
             <div className={styles.timeline_left}>
               <span className={styles.dot}></span>
 
@@ -124,15 +91,13 @@ export default function Experience() {
               )}
 
               <span className={styles.year}>
-                {item.year}
+                {t(`experience.items.${item.id}.year`, {
+                  defaultValue: item.year,
+                })}
               </span>
             </div>
 
-            {/* ================= CONTENT ================= */}
-
             <div className={styles.experience_content}>
-              {/* COMPANY */}
-
               <div className={styles.company_info}>
                 <div className={styles.logo_box}>
                   {item.logo ? (
@@ -150,105 +115,87 @@ export default function Experience() {
 
                 <div>
                   <p className={styles.role}>
-                    {item.role}
+                    {t(`experience.items.${item.id}.role`, {
+                      defaultValue: item.role,
+                    })}
                   </p>
 
                   <h3>{item.company}</h3>
                 </div>
               </div>
 
-              {/* PROJECT */}
-
-              {item.project && (
+              {item.projectKey && (
                 <div className={styles.project_block}>
                   <span className={styles.block_label}>
-                    PROJECT
+                    {t("experience.project")}
                   </span>
 
-                  <h4>{item.project}</h4>
+                  <h4>{t(`experience.items.${item.id}.project`)}</h4>
                 </div>
               )}
 
-              {/* DESCRIPTION */}
-
               <p className={styles.description}>
-                {item.description}
+                {t(`experience.items.${item.id}.description`)}
               </p>
-
-              {/* WHAT I DID */}
 
               <div className={styles.responsibilities}>
                 <span className={styles.block_label}>
-                  WHAT I DID
+                  {t("experience.responsibilities")}
                 </span>
 
                 <ul>
-                  {item.responsibilities.map(
-                    (responsibility) => (
-                      <li key={responsibility}>
-                        <span className={styles.bullet}>
-                          +
-                        </span>
-
-                        <span>
-                          {responsibility}
-                        </span>
-                      </li>
-                    )
-                  )}
+                  {t(
+                    `experience.items.${item.id}.responsibilities`,
+                    { returnObjects: true }
+                  ).map((responsibility, responsibilityIndex) => (
+                    <li key={`${item.id}-${responsibilityIndex}`}>
+                      <span className={styles.bullet}>+</span>
+                      <span>{responsibility}</span>
+                    </li>
+                  ))}
                 </ul>
               </div>
 
-              {/* SKILLS */}
-
               <div className={styles.skills_block}>
                 <span className={styles.block_label}>
-                  SKILLS
+                  {t("experience.skills")}
                 </span>
 
                 <div className={styles.tags}>
                   {item.skills.map((skill) => (
-                    <span key={skill}>
-                      {skill}
-                    </span>
+                    <span key={skill}>{skill}</span>
                   ))}
                 </div>
               </div>
 
-              {/* WORK IMAGES */}
+              {item.images && item.images.length > 0 && (
+                <div className={styles.work_block}>
+                  <span className={styles.block_label}>
+                    {t("experience.selectedWork")}
+                  </span>
 
-              {item.images &&
-                item.images.length > 0 && (
-                  <div className={styles.work_block}>
-                    <span className={styles.block_label}>
-                      SELECTED WORK
-                    </span>
+                  <div className={styles.work_images}>
+                    {item.images.map((image, imageIndex) => (
+                      <div
+                        className={styles.image_wrapper}
+                        key={image}
+                      >
+                        <img
+                          src={image}
+                          alt={t("experience.workImageAlt", {
+                            company: item.company,
+                            number: imageIndex + 1,
+                          })}
+                        />
 
-                    <div className={styles.work_images}>
-                      {item.images.map(
-                        (image, imageIndex) => (
-                          <div
-                            className={
-                              styles.image_wrapper
-                            }
-                            key={image}
-                          >
-                            <img
-                              src={image}
-                              alt={`${item.company} work ${
-                                imageIndex + 1
-                              }`}
-                            />
-
-                            <span>
-                              0{imageIndex + 1}
-                            </span>
-                          </div>
-                        )
-                      )}
-                    </div>
+                        <span>
+                          {String(imageIndex + 1).padStart(2, "0")}
+                        </span>
+                      </div>
+                    ))}
                   </div>
-                )}
+                </div>
+              )}
             </div>
           </article>
         ))}

@@ -1,0 +1,274 @@
+{
+  "nav": {
+    "home": "Trang chủ",
+    "about": "Giới thiệu",
+    "experience": "Kinh nghiệm",
+    "skills": "Kỹ năng",
+    "projects": "Dự án",
+    "contact": "Liên hệ"
+  },
+
+  "main": {
+    "hello": "Xin chào, tôi là",
+    "imA": "Tôi là",
+    "name": "Hoàng Trung Phong",
+    "roles": ["Designer", "Developer"],
+    "description": "Tôi là một developer đam mê xây dựng những trải nghiệm web tương tác và có tính thẩm mỹ cao. Tôi tập trung vào giao diện responsive, hiệu ứng chuyển động và các tương tác mang phong cách trò chơi. Tôi luôn mong muốn phát triển bản thân và đóng góp vào những dự án game sáng tạo.",
+    "viewCV": "Xem CV"
+  },
+    "about": {
+    "title": "GIỚI THIỆU",
+    "name": "HOÀNG TRUNG PHONG",
+    "jobTitle": "Lập trình viên Full-stack",
+    "location": "TP. Hồ Chí Minh, Việt Nam",
+    "bio1": {
+      "start": "Tôi là một",
+      "role": "Lập trình viên Full-stack",
+      "middle": "chuyên về phát triển web, có kinh nghiệm cả về",
+      "frontend": "Front-end",
+      "and": "và",
+      "backend": "Back-end",
+      "end": "."
+    },
+    "bio2": {
+      "start": "Tôi đã làm việc với",
+      "building": "xây dựng",
+      "workingWith": "và làm việc với",
+      "and": "và",
+      "end": "Tôi tập trung xây dựng các hệ thống có khả năng mở rộng và dễ bảo trì."
+    },
+    "bio3": {
+      "start": "Tôi có chứng chỉ",
+      "end": "và định hướng phát triển sự nghiệp trong môi trường làm việc chuyên nghiệp của Nhật Bản."
+    },
+    "hardSkills": "KỸ NĂNG CHUYÊN MÔN",
+    "softSkills": "KỸ NĂNG MỀM",
+    "softSkillItems": {
+      "teamwork": "Làm việc nhóm",
+      "communication": "Giao tiếp",
+      "problemSolving": "Giải quyết vấn đề",
+      "timeManagement": "Quản lý thời gian",
+      "selfLearning": "Tự học"
+    },
+    "viewCV": "XEM CV"
+  },
+
+
+"experience": {
+  "title": "KINH NGHIỆM LÀM VIỆC",
+  "project": "DỰ ÁN",
+  "responsibilities": "CÔNG VIỆC CHÍNH",
+  "skills": "KỸ NĂNG",
+  "selectedWork": "SẢN PHẨM TIÊU BIỂU",
+  "workImageAlt": "Sản phẩm {{number}} tại {{company}}",
+  "items": {
+    "fullbridge": {
+      "year": "2025 — HIỆN TẠI",
+      "role": "DPP DESIGNER",
+      "description": "Phụ trách chuẩn bị và chỉnh sửa file thiết kế DPP, đảm bảo các file đáp ứng yêu cầu kỹ thuật trước khi đưa vào sản xuất.",
+      "responsibilities": [
+        "Chuẩn bị và chỉnh sửa file thiết kế theo yêu cầu",
+        "Xử lý artwork phục vụ quá trình sản xuất",
+        "Kiểm tra bố cục, font chữ và các thông số kỹ thuật",
+        "Xuất file theo đúng yêu cầu sản xuất",
+        "Chỉnh sửa file khi có yêu cầu cập nhật"
+      ]
+    },
+    "ohstem": {
+      "year": "08/2024 — 10/2024",
+      "role": "THỰC TẬP SINH FRONT-END",
+      "project": "Website quản lý cuộc thi",
+      "description": "Tham gia phát triển giao diện website, cải thiện trải nghiệm người dùng và sửa các lỗi giao diện trong quá trình phát triển.",
+      "responsibilities": [
+        "Xây dựng giao diện theo yêu cầu của dự án",
+        "Phát triển và chỉnh sửa các component React",
+        "Điều chỉnh bố cục để giao diện dễ sử dụng hơn",
+        "Kiểm tra và sửa lỗi giao diện",
+        "Phối hợp với các thành viên trong nhóm"
+      ]
+    },
+    "urban": {
+      "year": "04/2024 — 07/2024",
+      "role": "THỰC TẬP SINH FRONT-END / BACK-END",
+      "project": "Website quản lý nhân sự",
+      "description": "Tham gia phát triển website quản lý nhân sự, tập trung vào giao diện và hỗ trợ xử lý các chức năng phía máy chủ.",
+      "responsibilities": [
+        "Xây dựng giao diện quản lý nhân viên",
+        "Phát triển các chức năng thêm, sửa, xóa và xem dữ liệu",
+        "Kết nối API để trao đổi dữ liệu",
+        "Xây dựng chức năng tải ảnh lên",
+        "Hỗ trợ xử lý các chức năng Back-end",
+        "Làm việc cùng nhóm 6 thành viên"
+      ]
+    }
+  }
+},
+
+
+  "skills": {
+    "title": "KỸ NĂNG",
+    "subtitle": "Tổng hợp các kỹ năng kỹ thuật và sáng tạo của tôi",
+    "view": "Xem",
+    "items": {
+      "drawing": {
+        "title": "Vẽ / Minh họa",
+        "description": "Tôi yêu thích vẽ nhân vật anime và bối cảnh, tập trung vào màu sắc và cảm xúc. Điều này giúp tôi phát triển tư duy sáng tạo và cảm quan hình ảnh, hỗ trợ tốt cho thiết kế và front-end.",
+        "detail": {
+          "drawing": {
+            "title": "Ứng dụng vẽ",
+            "csp": "Clip Studio Paint",
+            "photoshop": "Photoshop",
+            "medibang": "MediBang Paint",
+            "ibis": "ibisPaint"
+          },
+          "animation": {
+            "title": "Animation / Motion",
+            "live2d": "Live2D",
+            "spine": "Spine",
+            "aftereffects": "After Effects"
+          }
+        }
+      },
+      "uiux": {
+        "title": "Thiết kế UI/UX",
+        "description": "Kết hợp tư duy thiết kế và lập trình, tôi có thể hiện thực hóa ý tưởng UI/UX thành giao diện web tương tác, responsive và nhất quán trên nhiều thiết bị.",
+        "tools": "Công cụ"
+      },
+      "graphic": {
+        "title": "Thiết kế đồ họa",
+        "description": "Tôi có kinh nghiệm thiết kế poster và ấn phẩm truyền thông cho câu lạc bộ và sự kiện, tập trung vào bố cục gọn gàng và truyền tải thông điệp rõ ràng.",
+        "detail": {
+          "design": {
+            "title": "Ứng dụng thiết kế",
+            "figma": "Figma",
+            "canva": "Canva",
+            "picsart": "PicsArt",
+            "csp": "Clip Studio Paint",
+            "photoshop": "Photoshop"
+          },
+          "motion": {
+            "title": "Motion & Âm thanh",
+            "avee": "Avee Player",
+            "alight": "Alight Motion",
+            "capcut": "CapCut",
+            "aftereffects": "After Effects"
+          }
+        }
+      },
+      "game": {
+        "title": "Game Art / Unity",
+        "description": "Kinh nghiệm tạo art 2D cho game bao gồm nhân vật, hiệu ứng đạn và hiệu ứng hình ảnh. Quen thuộc với việc triển khai asset và logic gameplay cơ bản trong Unity để hỗ trợ gameplay rõ ràng và dễ hiểu.",
+        "tools": "Công cụ"
+      },
+      "web": {
+        "title": "Lập trình Web",
+        "description": "Tôi có thể phát triển ứng dụng web hoàn chỉnh cả Front-end và Back-end với ReactJS, Node.js và Java, đảm bảo hiệu năng, khả năng mở rộng và trải nghiệm người dùng."
+      },
+      "others": {
+        "title": "Khác",
+        "description": "Kỹ năng làm việc nhóm, giao tiếp và quản lý thời gian tốt. Có khả năng tự học, giải quyết vấn đề và thích nghi công nghệ mới. Trình độ tiếng Nhật JLPT N3.",
+
+        "detail": {
+          "office": {
+            "title": "Công cụ văn phòng",
+            "word": "Word",
+            "excel": "Excel",
+            "powerpoint": "PowerPoint"
+          },
+
+          "languages": {
+            "title": "Ngôn ngữ",
+            "vi": "Tiếng Việt",
+            "en": "Tiếng Anh",
+            "jp": "Tiếng Nhật"
+          }
+        }
+      }
+    }
+  },
+
+
+
+
+
+"projectsPage": {
+  "title": "DỰ ÁN",
+  "subtitle": "Khám phá các dự án và sản phẩm sáng tạo của tôi",
+  "tabs": {
+    "dev": "Lập trình",
+    "design": "Thiết kế",
+    "illustration": "Minh họa"
+  }
+},
+
+
+
+
+"devModal": {
+  "close": "Đóng cửa sổ",
+  "imageAlt": "{{title}} - hình {{number}}",
+  "previousImage": "Ảnh trước",
+  "nextImage": "Ảnh tiếp theo",
+  "viewImage": "Xem ảnh số {{number}}",
+  "projectLabel": "DỰ ÁN",
+  "technology": "CÔNG NGHỆ SỬ DỤNG",
+  "liveDemo": "Xem bản demo",
+  "frontend": "Front-end",
+  "backend": "Back-end",
+  "githubNotice": "Mã nguồn có trên GitHub"
+},
+
+
+"devSection": {
+  "projects": {
+    "myWallpaper": {
+      "title": "Website MyWallpaper",
+      "description": "Website hình nền anime được xây dựng bằng ReactJS, hỗ trợ lọc theo danh mục, tìm kiếm, xem chi tiết hình ảnh và sử dụng các component tái sử dụng với giao diện tối hiện đại."
+    },
+    "weatherChill": {
+      "title": "Website WeatherChill",
+      "description": "Ứng dụng web kết hợp thời tiết, âm nhạc, hình ảnh và hiệu ứng chuyển động để mang đến trải nghiệm thư giãn, nhẹ nhàng."
+    },
+    "nihongo": {
+      "title": "Website học tiếng Nhật Nihongo",
+      "description": "Ứng dụng học tiếng Nhật tương tác với các chức năng luyện từ vựng, học ngữ pháp và làm bài kiểm tra, cùng giao diện trực quan, dễ sử dụng."
+    },
+    "shopAnime": {
+      "title": "Website Shop Anime",
+      "description": "Website bán hàng anime trực tuyến, cung cấp mô hình, quần áo và các sản phẩm sưu tầm với trải nghiệm mua sắm sinh động."
+    },
+    "portfolio": {
+      "title": "Website Portfolio cá nhân",
+      "description": "Website giới thiệu các dự án lập trình web, sản phẩm thiết kế và những sản phẩm sáng tạo của tôi."
+    },
+    "bulletHell": {
+      "title": "Game Bullet Hell",
+      "description": "Game bắn đạn 2D lấy cảm hứng từ Touhou Project và Just Shapes & Beats, tập trung vào khả năng di chuyển chính xác, né đạn và kỹ năng của người chơi."
+    }
+  }
+},
+
+
+
+
+
+
+
+
+
+"contact": {
+  "title": "LIÊN HỆ",
+  "subtitle": "Kết nối và cùng nhau tạo nên những điều thú vị",
+  "email": "Email",
+  "phone": "Số điện thoại",
+  "location": "Địa điểm",
+  "city": "Thành phố Hồ Chí Minh",
+  "namePlaceholder": "Họ và tên",
+  "emailPlaceholder": "Email của bạn",
+  "messagePlaceholder": "Nội dung tin nhắn...",
+  "send": "Gửi tin nhắn",
+  "notice": "*Đây chỉ là giao diện minh họa — biểu mẫu chưa có chức năng gửi email."
+}
+
+
+}

@@ -1,12 +1,16 @@
+
 import React from "react";
+import { useTranslation } from "react-i18next";
 import styles from "./About.module.css";
 import avatar from "../../assets/avatar.png";
 import { Mail, Phone, MapPin } from "lucide-react";
 
 function About() {
+  const { t } = useTranslation();
+
   return (
     <section id="about" className={styles.about_section}>
-      <h2 className={styles.title}>ABOUT ME</h2>
+      <h2 className={styles.title}>{t("about.title")}</h2>
 
       <div className={styles.wrapper}>
         {/* LEFT */}
@@ -16,8 +20,8 @@ function About() {
           </div>
 
           <div className={styles.profile_info}>
-            <h3 className={styles.name}>HOANG TRUNG PHONG</h3>
-            <p className={styles.job_title}>Full-stack Developer</p>
+            <h3 className={styles.name}>{t("about.name")}</h3>
+            <p className={styles.job_title}>{t("about.jobTitle")}</p>
           </div>
 
           <div className={styles.contact_list}>
@@ -25,13 +29,15 @@ function About() {
               <Mail size={16} color="#00ffcc" />
               <span>hoangtrungphongit202@gmail.com</span>
             </div>
+
             <div className={styles.contact_item}>
               <Phone size={16} color="#00ffcc" />
               <span>0356344088</span>
             </div>
+
             <div className={styles.contact_item}>
               <MapPin size={16} color="#00ffcc" />
-              <span>TP. Hồ Chí Minh, VN</span>
+              <span>{t("about.location")}</span>
             </div>
           </div>
         </div>
@@ -41,18 +47,38 @@ function About() {
           <div className={styles.bio_container}>
             <div className={styles.bio_text}>
               <p>
-                I am a <span className={styles.highlight}>Full-stack Developer</span> specializing in web development, with experience in both <span className={styles.highlight}>Front-end</span> and{" "}
-                <span className={styles.highlight}>Back-end</span>.
+                {t("about.bio1.start")}{" "}
+                <span className={styles.highlight}>
+                  {t("about.bio1.role")}
+                </span>{" "}
+                {t("about.bio1.middle")}{" "}
+                <span className={styles.highlight}>
+                  {t("about.bio1.frontend")}
+                </span>{" "}
+                {t("about.bio1.and")}{" "}
+                <span className={styles.highlight}>
+                  {t("about.bio1.backend")}
+                </span>
+                {t("about.bio1.end")}
               </p>
 
               <p>
-                I have worked with <span className={styles.highlight}>ReactJS</span>, <span className={styles.highlight}>Java (Spring Boot)</span>, building{" "}
-                <span className={styles.highlight}>RESTful APIs</span> and working with <span className={styles.highlight}>MySQL</span> and <span className={styles.highlight}>SQL Server</span>. I
-                focus on building scalable and maintainable systems.
+                {t("about.bio2.start")}{" "}
+                <span className={styles.highlight}>ReactJS</span>,{" "}
+                <span className={styles.highlight}>Java (Spring Boot)</span>,{" "}
+                {t("about.bio2.building")}{" "}
+                <span className={styles.highlight}>RESTful APIs</span>{" "}
+                {t("about.bio2.workingWith")}{" "}
+                <span className={styles.highlight}>MySQL</span>{" "}
+                {t("about.bio2.and")}{" "}
+                <span className={styles.highlight}>SQL Server</span>.{" "}
+                {t("about.bio2.end")}
               </p>
 
               <p>
-                I hold a <span className={styles.highlight}>JLPT N3</span> and aim to develop my career in a Japanese professional environment.
+                {t("about.bio3.start")}{" "}
+                <span className={styles.highlight}>JLPT N3</span>{" "}
+                {t("about.bio3.end")}
               </p>
             </div>
           </div>
@@ -60,37 +86,64 @@ function About() {
           {/* SKILLS */}
           <div className={styles.skills_container}>
             <div className={styles.skill_box}>
-              <h4 className={styles.skill_title}>Hard Skills</h4>
+              <h4 className={styles.skill_title}>
+                {t("about.hardSkills")}
+              </h4>
+
               <div className={styles.tags}>
-                <span className={styles.tag}>HTML</span>
-                <span className={styles.tag}>CSS</span>
-                <span className={styles.tag}>JavaScript</span>
-                <span className={styles.tag}>ReactJS</span>
-                <span className={styles.tag}>Java</span>
-                <span className={styles.tag}>Spring Boot</span>
-                <span className={styles.tag}>REST API</span>
-                <span className={styles.tag}>MySQL</span>
-                <span className={styles.tag}>SQL Server</span>
-                <span className={styles.tag}>Git</span>
+                {[
+                  "HTML",
+                  "CSS",
+                  "JavaScript",
+                  "ReactJS",
+                  "Java",
+                  "Spring Boot",
+                  "REST API",
+                  "MySQL",
+                  "SQL Server",
+                  "Git",
+                ].map((skill) => (
+                  <span key={skill} className={styles.tag}>
+                    {skill}
+                  </span>
+                ))}
               </div>
             </div>
 
             <div className={styles.skill_box}>
-              <h4 className={styles.skill_title}>Soft Skills</h4>
+              <h4 className={styles.skill_title}>
+                {t("about.softSkills")}
+              </h4>
+
               <div className={styles.tags}>
-                <span className={styles.tag}>Teamwork</span>
-                <span className={styles.tag}>Communication</span>
-                <span className={styles.tag}>Problem Solving</span>
-                <span className={styles.tag}>Time Management</span>
-                <span className={styles.tag}>Self-learning</span>
+                {[
+                  "teamwork",
+                  "communication",
+                  "problemSolving",
+                  "timeManagement",
+                  "selfLearning",
+                ].map((skill) => (
+                  <span key={skill} className={styles.tag}>
+                    {t(`about.softSkillItems.${skill}`)}
+                  </span>
+                ))}
               </div>
             </div>
           </div>
 
           {/* BUTTON */}
           <div className={styles.btn_wrapper}>
-            <button className={styles.cv_button} onClick={() => window.open("https://drive.google.com/file/d/1MvzXyczw6YygRxkQK15iAkUN4WIU8FTX/view?usp=sharing", "_blank")}>
-              VIEW CV
+            <button
+              className={styles.cv_button}
+              onClick={() =>
+                window.open(
+                  "https://drive.google.com/file/d/1MvzXyczw6YygRxkQK15iAkUN4WIU8FTX/view?usp=sharing",
+                  "_blank",
+                  "noopener,noreferrer"
+                )
+              }
+            >
+              {t("about.viewCV")}
             </button>
           </div>
         </div>

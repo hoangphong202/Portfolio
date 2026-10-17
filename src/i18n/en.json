@@ -1,0 +1,269 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "experience": "Work Experience",
+    "skills": "Skills",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+    "main": {
+    "hello": "Hello, I'm",
+    "imA": "I'm a",
+    "name": "Hoang Trung Phong",
+    "roles": ["Designer", "Developer"],
+    "description": "I am a developer passionate about building interactive and visually engaging web experiences. I focus on responsive interfaces, animations, and game-like interactions. I am motivated to grow and contribute to creative game projects.",
+    "viewCV": "View CV"
+  },
+
+  "about": {
+    "title": "ABOUT ME",
+    "name": "HOANG TRUNG PHONG",
+    "jobTitle": "Full-stack Developer",
+    "location": "Ho Chi Minh City, Vietnam",
+    "bio1": {
+      "start": "I am a",
+      "role": "Full-stack Developer",
+      "middle": "specializing in web development, with experience in both",
+      "frontend": "Front-end",
+      "and": "and",
+      "backend": "Back-end",
+      "end": "."
+    },
+    "bio2": {
+      "start": "I have worked with",
+      "building": "building",
+      "workingWith": "and working with",
+      "and": "and",
+      "end": "I focus on building scalable and maintainable systems."
+    },
+    "bio3": {
+      "start": "I hold a",
+      "end": "and aim to develop my career in a Japanese professional environment."
+    },
+    "hardSkills": "HARD SKILLS",
+    "softSkills": "SOFT SKILLS",
+    "softSkillItems": {
+      "teamwork": "Teamwork",
+      "communication": "Communication",
+      "problemSolving": "Problem Solving",
+      "timeManagement": "Time Management",
+      "selfLearning": "Self-learning"
+    },
+    "viewCV": "VIEW CV"
+  
+},
+
+
+"experience": {
+  "title": "WORK EXPERIENCE",
+  "project": "PROJECT",
+  "responsibilities": "KEY RESPONSIBILITIES",
+  "skills": "SKILLS",
+  "selectedWork": "SELECTED WORK",
+  "workImageAlt": "{{company}} work sample {{number}}",
+  "items": {
+    "fullbridge": {
+      "year": "2025 — PRESENT",
+      "role": "DPP DESIGNER",
+      "description": "Prepare and refine DPP design files, making sure they meet technical requirements before production.",
+      "responsibilities": [
+        "Prepare and edit design files for production",
+        "Handle artwork preparation for production",
+        "Check layouts, typography and technical details",
+        "Export files according to production requirements",
+        "Update design files based on feedback and revisions"
+      ]
+    },
+    "ohstem": {
+      "year": "AUG 2024 — OCT 2024",
+      "role": "FRONT-END DEVELOPER INTERN",
+      "project": "Competition Management Website",
+      "description": "Helped develop website interfaces, improve user experience and fix UI issues during development.",
+      "responsibilities": [
+        "Build website interfaces based on project requirements",
+        "Develop and update React components",
+        "Improve layouts and usability",
+        "Test and fix UI issues",
+        "Work with team members throughout development"
+      ]
+    },
+    "urban": {
+      "year": "APR 2024 — JUL 2024",
+      "role": "FRONT-END / BACK-END DEVELOPER INTERN",
+      "project": "Personnel Management Website",
+      "description": "Contributed to a personnel management website, mainly working on the front end while supporting back-end development.",
+      "responsibilities": [
+        "Build employee management interfaces",
+        "Implement functions to create, view, update and delete employee records",
+        "Connect APIs to handle data",
+        "Develop image upload functionality",
+        "Assist with back-end tasks",
+        "Collaborate with a team of six"
+      ]
+    }
+  }
+},
+
+
+
+  "skills": {
+    "title": "SKILLS",
+    "subtitle": "A showcase of my technical and creative abilities",
+    "view": "View",
+    "items": {
+      "drawing": {
+        "title": "Drawing / Illustration",
+        "description": "I enjoy drawing anime characters and backgrounds, focusing on color harmony and mood. This hobby strengthens my creativity and visual sense, which supports my design and front-end work.",
+        "detail": {
+          "drawing": {
+            "title": "Drawing Applications",
+            "csp": "Clip Studio Paint",
+            "photoshop": "Photoshop",
+            "medibang": "MediBang Paint",
+            "ibis": "ibisPaint"
+          },
+          "animation": {
+            "title": "Animation / Motion",
+            "live2d": "Live2D",
+            "spine": "Spine",
+            "aftereffects": "After Effects"
+          }
+        }
+      },
+      "uiux": {
+        "title": "UI/UX Design",
+        "description": "With both design sense and coding skills, I can transform UI/UX ideas into interactive, responsive web interfaces. I focus on building designs that are visually appealing, accessible, and consistent across devices.",
+        "tools": "Tools"
+      },
+      "graphic": {
+        "title": "Graphic Design",
+        "description": "I have experience designing posters and visual content for clubs and events. I focus on creating clean, aesthetic designs that clearly convey messages and enhance visual appeal.",
+        "detail": {
+          "design": {
+            "title": "Design Applications",
+            "figma": "Figma",
+            "canva": "Canva",
+            "picsart": "PicsArt",
+            "csp": "Clip Studio Paint",
+            "photoshop": "Photoshop"
+          },
+          "motion": {
+            "title": "Motion & Audio Design",
+            "avee": "Avee Player",
+            "alight": "Alight Motion",
+            "capcut": "CapCut",
+            "aftereffects": "After Effects"
+          }
+        }
+      },
+      "game": {
+        "title": "Game Art / Unity",
+        "description": "Experience creating 2D game art including characters, bullet visuals, and visual effects. Familiar with implementing assets and basic gameplay logic in Unity to support clear and readable gameplay.",
+        "tools": "Tools"
+      },
+      "web": {
+        "title": "Web Developer",
+        "description": "I'm capable of developing complete web applications on both Front-end and Back-end. My main technologies include ReactJS, Node.js, and Java, which allow me to build efficient and scalable systems with clean and user-friendly interfaces."
+      },
+      "others": {
+        "title": "Others",
+        "description": "Good at teamwork, communication, and time management. Skilled in problem-solving and adapting to new technologies. Japanese level: JLPT N3.",
+        "detail": {
+          "office": {
+            "title": "Office Tools",
+            "word": "Word",
+            "excel": "Excel",
+            "powerpoint": "PowerPoint"
+          },
+          "languages": {
+            "title": "Languages",
+            "vi": "Vietnamese",
+            "en": "English",
+            "jp": "Japanese"
+          }
+        }
+      }
+    }
+  },
+
+
+
+"projectsPage": {
+  "title": "PROJECTS",
+  "subtitle": "Explore my work and creative projects",
+  "tabs": {
+    "dev": "DEV",
+    "design": "Design",
+    "illustration": "Illustration"
+  }
+},
+
+
+
+
+"devModal": {
+  "close": "Close modal",
+  "imageAlt": "{{title}} - image {{number}}",
+  "previousImage": "Previous image",
+  "nextImage": "Next image",
+  "viewImage": "View image {{number}}",
+  "projectLabel": "PROJECT",
+  "technology": "TECHNOLOGY",
+  "liveDemo": "Live Demo",
+  "frontend": "Frontend",
+  "backend": "Backend",
+  "githubNotice": "Source code available on GitHub"
+},
+
+
+"devSection": {
+  "projects": {
+    "myWallpaper": {
+      "title": "MyWallpaper Website",
+      "description": "A responsive anime wallpaper website built with ReactJS, featuring category filters, search, artwork detail pages, reusable components, and a modern dark-themed interface."
+    },
+    "weatherChill": {
+      "title": "WeatherChill Website",
+      "description": "A relaxing web app that combines weather, music, visuals, and motion effects to create a calm and immersive experience."
+    },
+    "nihongo": {
+      "title": "Nihongo Learning Website",
+      "description": "An interactive Japanese learning app featuring vocabulary practice, grammar lessons, and quizzes in a clean, user-friendly interface."
+    },
+    "shopAnime": {
+      "title": "Anime Shop Website",
+      "description": "An online anime store offering figures, apparel, and collectibles with an engaging shopping experience."
+    },
+    "portfolio": {
+      "title": "Personal Portfolio Website",
+      "description": "A personal portfolio showcasing my web development projects, design work, and creative projects."
+    },
+    "bulletHell": {
+      "title": "Bullet Hell Game",
+      "description": "A 2D bullet hell game inspired by Touhou Project and Just Shapes & Beats, focusing on precise movement, bullet dodging, and skill-based gameplay."
+    }
+  }
+},
+
+
+
+
+
+
+"contact": {
+  "title": "CONTACT",
+  "subtitle": "Let's connect and create something great together",
+  "email": "Email",
+  "phone": "Phone Number",
+  "location": "Location",
+  "city": "Ho Chi Minh City, Vietnam",
+  "namePlaceholder": "Your name",
+  "emailPlaceholder": "Your email",
+  "messagePlaceholder": "Write your message...",
+  "send": "Send Message",
+  "notice": "*This is a demo form — email sending is not yet enabled."
+}
+
+
+}
