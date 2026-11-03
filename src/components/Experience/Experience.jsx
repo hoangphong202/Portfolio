@@ -8,7 +8,7 @@ import ohstem from "../../assets/logo/company/ohstem.jpg";
 const experiences = [
   {
     id: "fullbridge",
-    year: "2025 — PRESENT",
+    year: "08/2026 — PRESENT",
     role: "DPP DESIGNER",
     company: "Fullbridge",
     logo: fullbridge,
